@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قرآن بلازا - منصة تحفيظ القرآن الكريم</title>
+<script src="https://cdn.tailwindcss.com/3.4.16">
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Tajawal:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#1E3D59",
+        secondary: "#C5A572",
+      },
+      borderRadius: {
+        none: "0px",
+        sm: "4px",
+        DEFAULT: "8px",
+        md: "12px",
+        lg: "16px",
+        xl: "20px",
+        "2xl": "24px",
+        "3xl": "32px",
+        full: "9999px",
+        button: "8px",
+      },
+      fontFamily: {
+        cairo: ["Cairo", "sans-serif"],
+        tajawal: ["Tajawal", "sans-serif"],
+      },
+    },
+  },
+};
+</script>
+<style>
+:where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        .hero-bg {
+            background-image: url('https://readdy.ai/api/search-image?query=beautiful%20islamic%20geometric%20patterns%20in%20soft%20blue%20and%20gold%20colors%2C%20elegant%20arabic%20calligraphy%20elements%2C%20peaceful%20mosque%20interior%20with%20warm%20lighting%2C%20traditional%20islamic%20architecture%20details%2C%20serene%20atmosphere%20for%20quran%20learning%2C%20clean%20minimal%20background%20with%20subtle%20ornamental%20borders&width=1920&height=800&seq=hero001&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* Gradient counter numbers */
+        .counter {
+            background: linear-gradient(90deg, #C5A572 0%, #a88b53 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        /* Nav dot hover effect */
+        .main-nav-link {
+            position: relative;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        .main-nav-link::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: -7px;
+            width: 8px;
+            height: 8px;
+            background: #C5A572;
+            border-radius: 50%;
+            opacity: 0;
+            transform: translateX(-50%) scale(0.3);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .main-nav-link:hover, .main-nav-link:focus {
+            color: #C5A572 !important;
+        }
+        .main-nav-link:hover::after, .main-nav-link:focus::after {
+            opacity: 1;
+            transform: translateX(-50%) scale(1);
+        }
+</style>
+</head>
+<body class="font-tajawal bg-gray-50">
+<<nav class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20 transition-all duration-500">
+            <div class="flex items-center">
+                <div class="text-3xl font-cairo font-bold text-primary transition-all duration-500">قرآن بلازا</div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+                <a href="#" class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">الرئيسية</a>
+                <a href="#features" class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">المميزات</a>
+                <a href="#testimonials" class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">الآراء</a>
+                <a href="#packages" class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">الباقات</a>
+                <a href="#contact" class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">تواصل معنا</a>
+            </div>
+            <button
+                class="relative bg-[#1a365d] text-white px-6 py-2 !rounded-button hover:bg-[#2d4a7c] transition-all duration-300 whitespace-nowrap overflow-hidden group">
+                <span class="relative z-10">احجز الآن</span>
+                <div class="absolute inset-0 w-full h-full">
+                    <div class="absolute inset-0 opacity-50 group-hover:opacity-100 transition-opacity duration-300">
+                        <div
+                            class="absolute h-[500%] w-[200%] -top-[250%] left-[50%] bg-[radial-gradient(closest-side,rgba(255,255,255,0.2),transparent)] animate-[spin_8s_linear_infinite]">
+                        </div>
+                    </li>
+                </div>
+            </button>
+        </div>
+    </div>
+</nav>
+<section class="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-blue-50/80 via-white to-amber-50/80">
+    <div class="absolute top-20 right-20 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-20 w-96 h-96 bg-secondary opacity-5 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-100 opacity-5 rounded-full blur-3xl">
+    </div>
+    <div class="relative z-10 w-full py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-row-reverse items-center justify-between gap-8">
+                <div class="w-1/2">
+                    <img src="https://readdy.ai/api/search-image?query=happy%20muslim%20children%20in%20traditional%20islamic%20clothing%20sitting%20together%20and%20reading%20quran%2C%20bright%20natural%20lighting%2C%20modern%20classroom%20setting%2C%20joyful%20expressions%2C%20clean%20and%20professional%20photography%20style%2C%20high%20quality&width=600&height=600&seq=hero003&orientation=squarish"
+                        alt="Happy children learning Quran" class="w-full h-auto rounded-2xl shadow-lg">
+                </div>
+                <div class="w-1/2 text-right">
+                    <h1 class="text-5xl md:text-6xl font-cairo font-bold text-primary mb-6 leading-[1.25] md:leading-[1.3] lg:leading-[1.4]">
+                        رحلتك مع كتاب الله<br>تبدأ من هنا
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-12 leading-relaxed">
+                        نقدم لأبنائك تجربة فريدة في تعلم وحفظ القرآن الكريم مع معلمين متخصصين. نهتم بغرس حب القرآن في قلوبهم من خلال أساليب
+                        تعليمية حديثة ومتطورة، مع مراعاة الفروق الفردية وتقديم الدعم المستمر لضمان تحقيق أفضل النتائج
+                    </p>
+                    <button
+                        class="group bg-secondary text-white px-12 py-6 text-xl font-semibold !rounded-button hover:bg-opacity-90 transition-all transform hover:scale-105 hover:shadow-xl whitespace-nowrap relative overflow-hidden">
+                        <span class="relative z-10">احجز حصتك التجريبية مجاناً</span>
+                        <div
+                            class="absolute inset-0 bg-white opacity-20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300">
+                        </div>
+                    </button>
+                    <div class="mt-16 flex items-center gap-12">
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 flex items-center justify-center mb-3">
+                                <i class="ri-user-3-line text-2xl text-primary"></i>
+                            </div>
+                            <div class="text-4xl font-bold mb-2 counter bg-gradient-to-r from-[#C5A572] to-[#a88b53] bg-clip-text text-transparent"
+                                data-target="1000">0</div>
+                            <div class="text-gray-600">طالب وطالبة</div>
+                        </div>
+                        <div class="w-px h-16 bg-gray-200"></div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 flex items-center justify-center mb-3">
+                                <i class="ri-team-line text-2xl text-primary"></i>
+                            </div>
+                            <div class="text-4xl font-bold mb-2 counter bg-gradient-to-r from-[#C5A572] to-[#a88b53] bg-clip-text text-transparent"
+                                data-target="50">0</div>
+                            <div class="text-gray-600">معلم ومعلمة</div>
+                        </div>
+                        <div class="w-px h-16 bg-gray-200"></div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 flex items-center justify-center mb-3">
+                                <i class="ri-star-line text-2xl text-primary"></i>
+                            </div>
+                            <div class="text-4xl font-bold mb-2 counter bg-gradient-to-r from-[#C5A572] to-[#a88b53] bg-clip-text text-transparent"
+                                data-target="95">0</div>
+                            <div class="text-gray-600">نسبة الرضا</div>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+</section>
+<section id="features" class="py-20 relative overflow-hidden" style="background:#fff5d8;">
+<div class="absolute top-20 right-20 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
+<div class="absolute bottom-20 left-20 w-96 h-96 bg-secondary opacity-5 rounded-full blur-3xl"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-cairo font-bold text-primary mb-4 animate-fade-in">لماذا قرآن بلازا؟</h2>
+<p class="text-xl text-gray-600">مميزات تجعلنا الخيار الأول لتحفيظ القرآن الكريم</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center border border-gray-100 hover:border-secondary/20">
+<div class="w-20 h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300">
+<i class="ri-user-star-line text-3xl text-primary group-hover:text-secondary transition-colors duration-300"></i>
+</div>
+<h3 class="text-xl font-cairo font-semibold text-primary mb-3 group-hover:text-secondary transition-colors duration-300">معلمون ومعلمات متخصصون</h3>
+<p class="text-gray-600">نخبة من المعلمين الحاصلين على إجازات في القرآن الكريم والتجويد</p>
+</div>
+<div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center border border-gray-100 hover:border-secondary/20">
+<div class="w-20 h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300">
+<i class="ri-book-open-line text-3xl text-primary group-hover:text-secondary transition-colors duration-300"></i>
+</div>
+<h3 class="text-xl font-cairo font-semibold text-primary mb-3 group-hover:text-secondary transition-colors duration-300">حفظ ومراجعة بإشراف مباشر</h3>
+<p class="text-gray-600">متابعة يومية للحفظ والمراجعة مع تصحيح الأخطاء فورياً</p>
+</div>
+<div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center border border-gray-100 hover:border-secondary/20">
+<div class="w-20 h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300">
+<i class="ri-time-line text-3xl text-primary group-hover:text-secondary transition-colors duration-300"></i>
+</div>
+<h3 class="text-xl font-cairo font-semibold text-primary mb-3 group-hover:text-secondary transition-colors duration-300">مرونة في المواعيد</h3>
+<p class="text-gray-600">اختر الأوقات التي تناسبك مع إمكانية تغيير المواعيد بسهولة</p>
+</div>
+<div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center border border-gray-100 hover:border-secondary/20">
+<div class="w-20 h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300">
+<i class="ri-file-chart-line text-3xl text-primary group-hover:text-secondary transition-colors duration-300"></i>
+</div>
+<h3 class="text-xl font-cairo font-semibold text-primary mb-3 group-hover:text-secondary transition-colors duration-300">تقارير دورية لأولياء الأمور</h3>
+<p class="text-gray-600">تقارير مفصلة عن تقدم الطالب وحضوره ومستوى حفظه</p>
+</div>
+</div>
+</div>
+</section>
+<section id="testimonials" class="py-20 relative overflow-hidden bg-gradient-to-br from-gray-50/50 via-white to-gray-50/50">
+<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50/80 via-white to-amber-50/80"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pb-12">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-cairo font-bold text-primary mb-4">ماذا يقول طلابنا؟</h2>
+<p class="text-xl text-gray-600">شهادات حقيقية من طلاب وأولياء أمور</p>
+</div>
+<div class="relative testimonials-carousel">
+<div class="overflow-hidden px-4 py-8">
+<div class="flex transition-transform duration-500 ease-in-out items-center">
+<div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+<div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=professional%20muslim%20woman%20teacher%20wearing%20hijab%20smiling%20warmly%2C%20clean%20white%20background%2C%20portrait%20style%2C%20professional%20lighting%2C%20confident%20and%20friendly%20expression&width=80&height=80&seq=test001&orientation=squarish" alt="أم محمد" class="w-16 h-16 rounded-full object-cover ml-4 ring-2 ring-secondary/20">
+<div>
+<h4 class="font-semibold text-primary text-lg">أم محمد العلي</h4>
+<p class="text-sm text-gray-600">ولي أمر</p>
+</div>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-double-quotes-r text-2xl text-secondary/30"></i>
+</div>
+</div>
+<div class="flex mb-4">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<p class="text-gray-700 leading-relaxed">
+"ابنتي تحفظ مع الأستاذة فاطمة منذ 6 أشهر وأرى تطوراً مذهلاً في حفظها وتلاوتها. المعلمة صبورة ومتفانية والمتابعة ممتازة."
+</p>
+</div>
+</div>
+<div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+<div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=young%20muslim%20man%20student%20smiling%20confidently%2C%20clean%20white%20background%2C%20portrait%20style%2C%20professional%20lighting%2C%20wearing%20traditional%20islamic%20clothing&width=80&height=80&seq=test002&orientation=squarish" alt="أحمد الشريف" class="w-16 h-16 rounded-full object-cover ml-4 ring-2 ring-secondary/20">
+<div>
+<h4 class="font-semibold text-primary text-lg">أحمد الشريف</h4>
+<p class="text-sm text-gray-600">طالب</p>
+</div>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-double-quotes-r text-2xl text-secondary/30"></i>
+</div>
+</div>
+<div class="flex mb-4">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<p class="text-gray-700 leading-relaxed">
+"أحفظ مع الأستاذ عبد الرحمن وهو معلم رائع. يشرح لي أحكام التجويد بطريقة سهلة ويصحح أخطائي بصبر. أنصح الجميع بالمنصة."
+</p>
+</div>
+</div>
+<div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+<div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=middle%20aged%20muslim%20father%20smiling%20warmly%2C%20clean%20white%20background%2C%20portrait%20style%2C%20professional%20lighting%2C%20traditional%20islamic%20appearance&width=80&height=80&seq=test003&orientation=squarish" alt="محمد الأحمد" class="w-16 h-16 rounded-full object-cover ml-4 ring-2 ring-secondary/20">
+<div>
+<h4 class="font-semibold text-primary text-lg">محمد الأحمد</h4>
+<p class="text-sm text-gray-600">ولي أمر</p>
+</div>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-double-quotes-r text-2xl text-secondary/30"></i>
+</div>
+</div>
+<div class="flex mb-4">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<p class="text-gray-700 leading-relaxed">
+"أولادي الثلاثة يحفظون في المنصة والحمد لله النتائج رائعة. المرونة في المواعيد والتقارير الدورية تساعدني في متابعتهم."
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center items-center mt-8 gap-4">
+<button class="carousel-prev w-12 h-12 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center text-primary hover:text-secondary">
+<i class="ri-arrow-right-s-line text-2xl"></i>
+</button>
+<div class="flex gap-2">
+<button class="carousel-dot w-3 h-3 rounded-full bg-primary/20 transition-all duration-300" data-index="0"></button>
+<button class="carousel-dot w-3 h-3 rounded-full bg-primary/20 transition-all duration-300" data-index="1"></button>
+<button class="carousel-dot w-3 h-3 rounded-full bg-primary/20 transition-all duration-300" data-index="2"></button>
+<button class="carousel-dot w-3 h-3 rounded-full bg-primary/20 transition-all duration-300" data-index="3"></button>
+<button class="carousel-dot w-3 h-3 rounded-full bg-primary/20 transition-all duration-300" data-index="4"></button>
+</div>
+<button class="carousel-next w-12 h-12 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center text-primary hover:text-secondary">
+<i class="ri-arrow-left-s-line text-2xl"></i>
+</button>
+</div>
+</div>
+</div>
+</section>
+<section id="packages" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-cairo font-bold text-primary mb-4">باقاتنا المميزة</h2>
+<p class="text-xl text-gray-600">اختر الباقة التي تناسب احتياجاتك</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="text-center">
+<h3 class="text-2xl font-cairo font-bold text-primary mb-2">الباقة الأساسية</h3>
+<div class="text-4xl font-bold text-secondary mb-4">
+١٢٠ ريال
+<span class="text-lg text-gray-600 font-normal">/شهرياً</span>
+</div>
+<ul class="text-right space-y-3 mb-8">
+<li class="flex items-center">
+<i class="ri-check-line text-green-500 ml-2"></i>
+٨ حصص شهرياً
+</li>
+<li class="flex items-center">
+<i class="ri-check-line text-green-500 ml-2"></i>
+مدة الحصة ٣٠ دقيقة
+</li>
+<li class="flex items-center">
+<i class="ri-check-line text-green-500 ml-2"></i>
+معلم متخصص
+</li>
+<li class="flex items-center">
+<i class="ri-check-line text-green-500 ml-2"></i>
+تقرير شهري
+</li>
+<li class="flex items-center">
+<i class="ri-check-line text-green-500 ml-2"></i>
+دعم فني عبر الواتساب
+</li>
+<li class="flex items-center opacity-50">
+<i class="ri-close-line text-red-500 ml-2"></i>
+مراجعة إضافية
+</li>
+</ul>
+<button class="w-full bg-primary text-white py-3 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+اشترك الآن
+</button>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-lg border-2 border-secondary relative">
+<div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+<span class="bg-secondary text-white px-4 py-1 rounded-full text-sm font-semibold">الأكثر شعبية</span>
+</div>
+<div class="text-center">
+<h3 class="text-2xl font-cairo font-bold text-primary mb-2">الباقة المتقدمة</h3>
+<div class="text-4xl font-bold text-secondary mb-4">
+٢٠٠ ريال
+<span class="text-lg text-gray-600 font-normal">/شهرياً</span>
+</div>
+<ul class="text-right space-y-3 mb-8">
+<li class="flex items-center">
+<i class="ri-check-line text-green-500 ml-2"></i>
+١٢ حصة شهرياً
+</li>
+<li class="flex items-center">
+<i class="ri-check-line text-green-500 ml-2"></i>
+مدة الحصة ٤٥ دقيقة
+</li>
+<li class="flex items-center">
+<i class="ri-check-line text-green-500 ml-2"></i>
+معلم متخصص
+</li>
+<li class="flex items-center">
+<i class="ri-check-line text-green-500 ml-2"></i>
+تقرير أسبوعي
+</li>
+<li class="flex items-center">
+<i class="ri-check-line text-green-500 ml-2"></i>
+دعم فني على مدار الساعة
+</li>
+<li class="flex items-center">
+<i class="ri-check-line text-green-500 ml-2"></i>
+مراجعة إضافية
+</li>
+</ul>
+<button class="w-full bg-secondary text-white py-3 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+اشترك الآن
+</button>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="text-center">
+<h3 class="text-2xl font-cairo font-bold text-primary mb-2">الباقة المكثفة</h3>
+<div class="text-4xl font-bold text-secondary mb-4">
+٣٥٠ ريال
+<span class="text-lg text-gray-600 font-normal">/شهرياً</span>
+</div>
+<ul class="text-right space-y-3 mb-8">
+<li class="flex items-center">
+<i class="ri-check-line text-green-500 ml-2"></i>
+٢٠ حصة شهرياً
+</li>
+<li class="flex items-center">
+<i class="ri-check-line text-green-500 ml-2"></i>
+مدة الحصة ٦٠ دقيقة
+</li>
+<li class="flex items-center">
+<i class="ri-check-line text-green-500 ml-2"></i>
+معلم متخصص
+</li>
+<li class="flex items-center">
+<i class="ri-check-line text-green-500 ml-2"></i>
+تقرير أسبوعي مفصل
+</li>
+<li class="flex items-center">
+<i class="ri-check-line text-green-500 ml-2"></i>
+دعم فني ٢٤/٧
+</li>
+<li class="flex items-center">
+<i class="ri-check-line text-green-500 ml-2"></i>
+مراجعة يومية
+</li>
+</ul>
+<button class="w-full bg-primary text-white py-3 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+اشترك الآن
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="contact" class="relative py-20 overflow-hidden" style="background:#fff5d8;">
+<div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-cairo font-bold text-primary mb-4">تواصل معنا</h2>
+<p class="text-xl text-gray-600">نحن هنا لمساعدتك في بدء رحلتك مع القرآن الكريم</p>
+</div>
+<form id="contact-form" class="bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-lg border border-gray-100">
+<div class="space-y-6">
+<div>
+<label for="name" class="block text-right text-gray-700 mb-2">الاسم</label>
+<input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="أدخل اسمك الكريم">
+</div>
+<div>
+<label for="age" class="block text-right text-gray-700 mb-2">السن</label>
+<input type="number" id="age" name="age" required min="5" max="99" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="أدخل عمرك">
+</div>
+<div>
+<label for="package" class="block text-right text-gray-700 mb-2">الباقة المطلوبة</label>
+<div class="relative">
+<select id="package" name="package" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors appearance-none bg-white">
+<option value="" disabled selected>اختر الباقة المناسبة</option>
+<option value="basic">الباقة الأساسية - ١٢٠ ريال</option>
+<option value="advanced">الباقة المتقدمة - ٢٠٠ ريال</option>
+<option value="intensive">الباقة المكثفة - ٣٥٠ ريال</option>
+</select>
+<div class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
+<i class="ri-arrow-down-s-line text-gray-400"></i>
+</div>
+</div>
+</div>
+<div>
+<label for="message" class="block text-right text-gray-700 mb-2">رسالة إضافية (اختياري)</label>
+<textarea id="message" name="message" rows="4" maxlength="500" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none" placeholder="اكتب رسالتك هنا..."></textarea>
+<div class="text-left text-sm text-gray-500 mt-1">
+<span id="char-count">0</span>/500
+</div>
+</div>
+<button type="submit" class="w-full bg-primary text-white py-4 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap group relative overflow-hidden">
+<span class="relative z-10">إرسال الطلب</span>
+<div class="absolute inset-0 w-full h-full">
+<div class="absolute inset-0 opacity-50 group-hover:opacity-100 transition-opacity duration-300">
+<div class="absolute h-[500%] w-[200%] -top-[250%] left-[50%] bg-[radial-gradient(closest-side,rgba(255,255,255,0.2),transparent)] animate-[spin_8s_linear_infinite]"></div>
+</div>
+</div>
+</button>
+</div>
+</form>
+</div>
+</section>
+<footer class="bg-primary text-white py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div>
+<div class="text-2xl font-cairo font-bold mb-4">قرآن بلازا</div>
+<p class="text-gray-300 mb-4">
+منصة متخصصة في تعليم وتحفيظ القرآن الكريم للصغار والكبار بأحدث الطرق التعليمية
+</p>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">روابط سريعة</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">من نحن</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">المعلمون</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">الباقات</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">سياسة الخصوصية</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">تواصل معنا</h4>
+<div class="space-y-3">
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center ml-3">
+<i class="ri-whatsapp-line text-green-400"></i>
+</div>
+<span class="text-gray-300">+966 50 123 4567</span>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center ml-3">
+<i class="ri-telegram-line text-blue-400"></i>
+</div>
+<span class="text-gray-300">@quranplaza</span>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center ml-3">
+<i class="ri-mail-line text-red-400"></i>
+</div>
+<span class="text-gray-300">info@quranplaza.com</span>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-600 mt-8 pt-8 text-center">
+<p class="text-gray-300">© 2025 قرآن بلازا. جميع الحقوق محفوظة.</p>
+</div>
+</div>
+</footer>
+<div class="fixed bottom-6 left-6 z-50">
+  <a
+    href="https://wa.me/201067005934"
+    target="_blank"
+    rel="noopener"
+    aria-label="تواصل عبر واتساب"
+    title="تواصل عبر واتساب"
+    class="bg-green-500 text-white w-16 h-16 rounded-full shadow-lg hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-300 transition-colors flex items-center justify-center"
+    style="box-sizing:content-box;"
+  >
+    <i class="ri-whatsapp-fill text-3xl" aria-hidden="true"></i>
+  </a>
+</div>
+<script id="smooth-scroll">
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    });
+  });
+});
+</script>
+<script id="counter-animation">
+document.addEventListener("DOMContentLoaded", function () {
+  const counters = document.querySelectorAll(".counter");
+  const speed = 200;
+  const startCounting = (counter) => {
+    const target = +counter.getAttribute("data-target");
+    const count = +counter.innerText;
+    const increment = target / speed;
+    if (count < target) {
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(() => startCounting(counter), 1);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  const observerCallback = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        startCounting(entry.target);
+      }
+    });
+  };
+  const observer = new IntersectionObserver(observerCallback, {
+    threshold: 0.5,
+  });
+  counters.forEach((counter) => observer.observe(counter));
+});
+</script>
+<script id="testimonials-carousel">
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.querySelector(".testimonials-carousel .flex");
+  const prevBtn = document.querySelector(".carousel-prev");
+  const nextBtn = document.querySelector(".carousel-next");
+  const dots = document.querySelectorAll(".carousel-dot");
+  let currentIndex = 0;
+  let isAnimating = false;
+  const viewportWidth = window.innerWidth;
+  let itemsPerView = 1;
+  if (viewportWidth >= 1024) {
+    itemsPerView = 3;
+  } else if (viewportWidth >= 768) {
+    itemsPerView = 2;
+  }
+  function updateCarousel() {
+    if (isAnimating) return;
+    isAnimating = true;
+    const itemWidth = carousel.children[0].offsetWidth + 32;
+    const translateX = -currentIndex * itemWidth;
+    carousel.style.transition = "transform 0.3s ease-in-out";
+    carousel.style.transform = `translateX(${translateX}px)`;
+    dots.forEach((dot, index) => {
+      if (index === currentIndex) {
+        dot.classList.add("bg-primary");
+        dot.classList.remove("bg-primary/20");
+      } else {
+        dot.classList.remove("bg-primary");
+        dot.classList.add("bg-primary/20");
+      }
+    });
+    setTimeout(() => {
+      isAnimating = false;
+    }, 300);
+  }
+  function handleNext() {
+    if (isAnimating) return;
+    if (currentIndex < carousel.children.length - itemsPerView) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+    updateCarousel();
+  }
+  function handlePrev() {
+    if (isAnimating) return;
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = carousel.children.length - itemsPerView;
+    }
+    updateCarousel();
+  }
+  prevBtn.addEventListener("click", handlePrev);
+  nextBtn.addEventListener("click", handleNext);
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      if (isAnimating) return;
+      currentIndex = index;
+      updateCarousel();
+    });
+  });
+  let autoplayInterval = setInterval(handleNext, 5000);
+  carousel.addEventListener("mouseenter", () => {
+    clearInterval(autoplayInterval);
+  });
+  carousel.addEventListener("mouseleave", () => {
+    autoplayInterval = setInterval(handleNext, 5000);
+  });
+  updateCarousel();
+});
+</script>
+<script id="navbar-scroll">
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector("nav");
+  const navbarContent = navbar.querySelector(".flex");
+  function updateNavbar() {
+    if (window.scrollY > 100) {
+      navbar.classList.add("shadow-md", "bg-white/80", "backdrop-blur-lg");
+      navbar.classList.remove("bg-white");
+      navbarContent.style.height = "64px";
+      navbar.querySelectorAll("a").forEach((link) => {
+        link.style.fontSize = "0.875rem";
+      });
+      navbar.querySelector(".font-cairo").style.fontSize = "1.5rem";
+    } else {
+      navbar.classList.remove("shadow-md", "bg-white/80", "backdrop-blur-lg");
+      navbar.classList.add("bg-white");
+      navbarContent.style.height = "80px";
+      navbar.querySelectorAll("a").forEach((link) => {
+        link.style.fontSize = "1.125rem";
+      });
+      navbar.querySelector(".font-cairo").style.fontSize = "1.875rem";
+    }
+  }
+  window.addEventListener("scroll", () => {
+    requestAnimationFrame(updateNavbar);
+  });
+  updateNavbar();
+});
+</script>
+<script id="cta-buttons">
+document.addEventListener("DOMContentLoaded", function () {
+  const ctaButtons = document.querySelectorAll("button");
+  ctaButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      if (
+        this.textContent.includes("احجز") ||
+        this.textContent.includes("اشترك")
+      ) {
+        alert("سيتم توجيهك لصفحة الحجز قريباً");
+      }
+    });
+  });
+});
+</script>
+<script id="contact-form">
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+  const messageInput = document.getElementById("message");
+  const charCount = document.getElementById("char-count");
+  messageInput.addEventListener("input", function () {
+    const count = this.value.length;
+    charCount.textContent = count;
+  });
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const age = document.getElementById("age").value;
+    const package = document.getElementById("package").value;
+    const message = document.getElementById("message").value;
+    let packageName = "";
+    switch (package) {
+      case "basic":
+        packageName = "الباقة الأساسية";
+        break;
+      case "advanced":
+        packageName = "الباقة المتقدمة";
+        break;
+      case "intensive":
+        packageName = "الباقة المكثفة";
+        break;
+    }
+    const whatsappMessage = `طلب اشتراك جديد:
+الاسم: ${name}
+العمر: ${age}
+الباقة: ${packageName}${message ? "\nرسالة إضافية: " + message : ""}`;
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    window.open(`https://wa.me/201067005934?text=${encodedMessage}`, "_blank");
+    form.reset();
+    charCount.textContent = "0";
+  });
+});
+</script>
+</body>
+</html>
