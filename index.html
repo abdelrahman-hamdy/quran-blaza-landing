@@ -113,11 +113,13 @@
                         class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">الآراء</a>
                     <a href="#packages"
                         class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">الباقات</a>
-                    <a href="#contact"
+                    <a id="navbar-contact-link" href="#contact"
                         class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">تواصل
                         معنا</a>
                 </div>
                 <button
+                    id="navbar-cta-btn"
+                    type="button"
                     class="relative bg-[#1a365d] text-white px-6 py-2 !rounded-button hover:bg-[#2d4a7c] transition-all duration-300 whitespace-nowrap overflow-hidden group">
                     <span class="relative z-10">احجز الآن</span>
                     <div class="absolute inset-0 w-full h-full">
@@ -158,6 +160,8 @@
                                 النتائج
                             </p>
                             <button
+                                id="hero-cta-btn"
+                                type="button"
                                 class="group bg-secondary text-white px-12 py-6 text-xl font-semibold !rounded-button hover:bg-opacity-90 transition-all transform hover:scale-105 hover:shadow-xl whitespace-nowrap relative overflow-hidden">
                                 <span class="relative z-10">احجز حصتك التجريبية مجاناً</span>
                                 <div
@@ -854,20 +858,31 @@
             });
         </script>
         <script id="cta-buttons">
-            document.addEventListener("DOMContentLoaded", function () {
-                const ctaButtons = document.querySelectorAll("button");
-                ctaButtons.forEach((button) => {
-                    button.addEventListener("click", function () {
-                        if (
-                            this.textContent.includes("احجز") ||
-                            this.textContent.includes("اشترك")
-                        ) {
-                            alert("سيتم توجيهك لصفحة الحجز قريباً");
-                        }
-                    });
-                });
-            });
-        </script>
+document.addEventListener("DOMContentLoaded", function () {
+    function scrollToContact() {
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+    // Navbar CTA button
+    const navbarCtaBtn = document.getElementById("navbar-cta-btn");
+    if (navbarCtaBtn) {
+        navbarCtaBtn.addEventListener("click", function(e) {
+            e.preventDefault();
+            scrollToContact();
+        });
+    }
+    // Hero CTA button
+    const heroCtaBtn = document.getElementById("hero-cta-btn");
+    if (heroCtaBtn) {
+        heroCtaBtn.addEventListener("click", function(e) {
+            e.preventDefault();
+            scrollToContact();
+        });
+    }
+});
+</script>
         <script id="contact-form">
             document.addEventListener("DOMContentLoaded", function () {
                 const form = document.getElementById("contact-form");
