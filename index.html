@@ -97,15 +97,15 @@
     </style>
 </head>
 
-<body class="font-tajawal bg-gray-50">
-    <<nav class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-500">
+<body id="top" class="font-tajawal bg-gray-50">
+    <nav class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-500">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20 transition-all duration-500">
                 <div class="flex items-center">
                     <div class="text-3xl font-cairo font-bold text-primary transition-all duration-500">قرآن بلازا</div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8 space-x-reverse">
-                    <a href="#"
+                    <a href="#top"
                         class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">الرئيسية</a>
                     <a href="#features"
                         class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">المميزات</a>
@@ -117,43 +117,91 @@
                         class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">تواصل
                         معنا</a>
                 </div>
-                <button
-                    id="navbar-cta-btn"
-                    type="button"
-                    class="relative bg-[#1a365d] text-white px-6 py-2 !rounded-button hover:bg-[#2d4a7c] transition-all duration-300 whitespace-nowrap overflow-hidden group">
-                    <span class="relative z-10">احجز الآن</span>
-                    <div class="absolute inset-0 w-full h-full">
-                        <div
-                            class="absolute inset-0 opacity-50 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <button
+                        id="navbar-cta-btn"
+                        type="button"
+                        class="relative bg-[#1a365d] text-white px-4 sm:px-6 py-2 !rounded-button hover:bg-[#2d4a7c] transition-all duration-300 whitespace-nowrap overflow-hidden group text-sm sm:text-base">
+                        <span class="relative z-10">احجز الآن</span>
+                        <div class="absolute inset-0 w-full h-full">
                             <div
-                                class="absolute h-[500%] w-[200%] -top-[250%] left-[50%] bg-[radial-gradient(closest-side,rgba(255,255,255,0.2),transparent)] animate-[spin_8s_linear_infinite]">
+                                class="absolute inset-0 opacity-50 group-hover:opacity-100 transition-opacity duration-300">
+                                <div
+                                    class="absolute h-[500%] w-[200%] -top-[250%] left-[50%] bg-[radial-gradient(closest-side,rgba(255,255,255,0.2),transparent)] animate-[spin_8s_linear_infinite]">
+                                </div>
                             </div>
-                            </li>
                         </div>
-                </button>
+                    </button>
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
-        </nav>
+    </nav>
+    
+    <!-- Mobile Sidebar -->
+    <div id="mobile-sidebar" class="fixed inset-0 z-50 hidden">
+        <!-- Backdrop -->
+        <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" id="sidebar-backdrop"></div>
+        
+        <!-- Sidebar -->
+        <div class="fixed top-0 right-0 h-full w-80 bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out" id="sidebar-panel">
+            <div class="flex items-center justify-between p-6 border-b">
+                <div class="text-2xl font-cairo font-bold text-primary">قرآن بلازا</div>
+                <button id="close-sidebar-btn" class="p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 transition-colors duration-200">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <nav class="p-6">
+                <ul class="space-y-4">
+                    <li><a href="#top" class="mobile-nav-link block py-3 px-4 text-lg text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200">الرئيسية</a></li>
+                    <li><a href="#features" class="mobile-nav-link block py-3 px-4 text-lg text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200">المميزات</a></li>
+                    <li><a href="#testimonials" class="mobile-nav-link block py-3 px-4 text-lg text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200">الآراء</a></li>
+                    <li><a href="#packages" class="mobile-nav-link block py-3 px-4 text-lg text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200">الباقات</a></li>
+                    <li><a href="#contact" class="mobile-nav-link block py-3 px-4 text-lg text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200">تواصل معنا</a></li>
+                </ul>
+                
+                <div class="mt-8 pt-6 border-t">
+                    <button id="mobile-cta-btn" class="w-full bg-secondary text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300">
+                        احجز حصتك التجريبية مجاناً
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
         <section
             class="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-blue-50/80 via-white to-amber-50/80">
-            <div class="absolute top-20 right-20 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-20 left-20 w-96 h-96 bg-secondary opacity-5 rounded-full blur-3xl"></div>
+            <!-- Background decorations - responsive -->
+            <div class="absolute top-10 sm:top-20 right-10 sm:right-20 w-32 sm:w-48 md:w-96 h-32 sm:h-48 md:h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-32 sm:w-48 md:w-96 h-32 sm:h-48 md:h-96 bg-secondary opacity-5 rounded-full blur-3xl"></div>
             <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-100 opacity-5 rounded-full blur-3xl">
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[600px] md:w-[800px] h-[400px] sm:h-[600px] md:h-[800px] bg-blue-100 opacity-5 rounded-full blur-3xl">
             </div>
-            <div class="relative z-10 w-full py-20">
+            
+            <div class="relative z-10 w-full py-10 sm:py-16 md:py-20">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="flex flex-row-reverse items-center justify-between gap-8">
-                        <div class="w-1/2">
+                    <!-- Mobile-first responsive layout -->
+                    <div class="flex flex-col lg:flex-row-reverse items-center justify-between gap-8 lg:gap-12">
+                        <!-- Image section -->
+                        <div class="w-full lg:w-1/2 order-1 lg:order-2">
                             <img src="https://readdy.ai/api/search-image?query=happy%20muslim%20children%20in%20traditional%20islamic%20clothing%20sitting%20together%20and%20reading%20quran%2C%20bright%20natural%20lighting%2C%20modern%20classroom%20setting%2C%20joyful%20expressions%2C%20clean%20and%20professional%20photography%20style%2C%20high%20quality&width=600&height=600&seq=hero003&orientation=squarish"
-                                alt="Happy children learning Quran" class="w-full h-auto rounded-2xl shadow-lg">
+                                alt="Happy children learning Quran" class="w-full h-auto rounded-2xl shadow-lg max-w-md mx-auto lg:max-w-none">
                         </div>
-                        <div class="w-1/2 text-right">
+                        
+                        <!-- Content section -->
+                        <div class="w-full lg:w-1/2 text-center lg:text-right order-2 lg:order-1">
                             <h1
-                                class="text-5xl md:text-6xl font-cairo font-bold text-primary mb-6 leading-[1.25] md:leading-[1.3] lg:leading-[1.4]">
+                                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-cairo font-bold text-primary mb-4 sm:mb-6 leading-[1.2] sm:leading-[1.25] md:leading-[1.3] lg:leading-[1.4]">
                                 رحلتك مع كتاب الله<br>تبدأ من هنا
                             </h1>
-                            <p class="text-xl text-gray-600 mb-12 leading-relaxed">
+                            <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                                 نقدم لأبنائك تجربة فريدة في تعلم وحفظ القرآن الكريم مع معلمين متخصصين. نهتم بغرس حب
                                 القرآن في قلوبهم من خلال أساليب
                                 تعليمية حديثة ومتطورة، مع مراعاة الفروق الفردية وتقديم الدعم المستمر لضمان تحقيق أفضل
@@ -162,40 +210,41 @@
                             <button
                                 id="hero-cta-btn"
                                 type="button"
-                                class="group bg-secondary text-white px-12 py-6 text-xl font-semibold !rounded-button hover:bg-opacity-90 transition-all transform hover:scale-105 hover:shadow-xl whitespace-nowrap relative overflow-hidden">
+                                class="group bg-secondary text-white px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 text-base sm:text-lg md:text-xl font-semibold !rounded-button hover:bg-opacity-90 transition-all transform hover:scale-105 hover:shadow-xl relative overflow-hidden w-full sm:w-auto">
                                 <span class="relative z-10">احجز حصتك التجريبية مجاناً</span>
                                 <div
                                     class="absolute inset-0 bg-white opacity-20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300">
                                 </div>
                             </button>
-                            <div class="mt-16 flex items-center gap-12">
+                            
+                            <!-- Stats section - responsive -->
+                            <div class="mt-8 sm:mt-12 md:mt-16 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 sm:gap-8 md:gap-12">
                                 <div class="flex flex-col items-center">
-                                    <div class="w-12 h-12 flex items-center justify-center mb-3">
-                                        <i class="ri-user-3-line text-2xl text-primary"></i>
+                                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mb-2 sm:mb-3">
+                                        <i class="ri-user-3-line text-xl sm:text-2xl text-primary"></i>
                                     </div>
-                                    <div class="text-4xl font-bold mb-2 counter bg-gradient-to-r from-[#C5A572] to-[#a88b53] bg-clip-text text-transparent"
+                                    <div class="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 counter bg-gradient-to-r from-[#C5A572] to-[#a88b53] bg-clip-text text-transparent"
                                         data-target="1000">0</div>
-                                    <div class="text-gray-600">طالب وطالبة</div>
+                                    <div class="text-sm sm:text-base text-gray-600">طالب وطالبة</div>
                                 </div>
-                                <div class="w-px h-16 bg-gray-200"></div>
+                                <div class="hidden sm:block w-px h-12 md:h-16 bg-gray-200"></div>
                                 <div class="flex flex-col items-center">
-                                    <div class="w-12 h-12 flex items-center justify-center mb-3">
-                                        <i class="ri-team-line text-2xl text-primary"></i>
+                                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mb-2 sm:mb-3">
+                                        <i class="ri-team-line text-xl sm:text-2xl text-primary"></i>
                                     </div>
-                                    <div class="text-4xl font-bold mb-2 counter bg-gradient-to-r from-[#C5A572] to-[#a88b53] bg-clip-text text-transparent"
+                                    <div class="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 counter bg-gradient-to-r from-[#C5A572] to-[#a88b53] bg-clip-text text-transparent"
                                         data-target="50">0</div>
-                                    <div class="text-gray-600">معلم ومعلمة</div>
+                                    <div class="text-sm sm:text-base text-gray-600">معلم ومعلمة</div>
                                 </div>
-                                <div class="w-px h-16 bg-gray-200"></div>
+                                <div class="hidden sm:block w-px h-12 md:h-16 bg-gray-200"></div>
                                 <div class="flex flex-col items-center">
-                                    <div class="w-12 h-12 flex items-center justify-center mb-3">
-                                        <i class="ri-star-line text-2xl text-primary"></i>
+                                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mb-2 sm:mb-3">
+                                        <i class="ri-star-line text-xl sm:text-2xl text-primary"></i>
                                     </div>
-                                    <div class="text-4xl font-bold mb-2 counter bg-gradient-to-r from-[#C5A572] to-[#a88b53] bg-clip-text text-transparent"
+                                    <div class="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 counter bg-gradient-to-r from-[#C5A572] to-[#a88b53] bg-clip-text text-transparent"
                                         data-target="95">0</div>
-                                    <div class="text-gray-600">نسبة الرضا</div>
+                                    <div class="text-sm sm:text-base text-gray-600">نسبة الرضا</div>
                                 </div>
-                                </li>
                             </div>
                         </div>
                     </div>
@@ -271,8 +320,8 @@
                 </div>
                 <div class="relative testimonials-carousel">
                     <div class="overflow-hidden px-4 py-8">
-                        <div class="flex transition-transform duration-500 ease-in-out items-center">
-                            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                        <div class="flex transition-transform duration-500 ease-in-out id="testimonials-track">
+                            <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
                                 <div
                                     class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
                                     <div class="flex items-center justify-between mb-6">
@@ -302,7 +351,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
                                 <div
                                     class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
                                     <div class="flex items-center justify-between mb-6">
@@ -332,7 +381,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
                                 <div
                                     class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
                                     <div class="flex items-center justify-between mb-6">
@@ -362,8 +411,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <!-- New Testimonial 1 -->
-                            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
                                 <div
                                     class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
                                     <div class="flex items-center justify-between mb-6">
@@ -392,8 +440,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <!-- New Testimonial 2 -->
-                            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
                                 <div
                                     class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
                                     <div class="flex items-center justify-between mb-6">
@@ -425,7 +472,13 @@
                         </div>
                     </div>
                     <div class="flex justify-center items-center mt-8 gap-4">
-                        <div class="flex gap-2">
+                        <!-- Previous button -->
+                        <button id="carousel-prev" class="w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-300 hover:bg-gray-50 group flex items-center justify-center">
+                            <i class="ri-arrow-right-s-line text-xl text-gray-600 group-hover:text-primary transition-colors duration-300"></i>
+                        </button>
+                        
+                        <!-- Dots -->
+                        <div class="flex gap-2" id="carousel-dots">
                             <button class="carousel-dot w-3 h-3 rounded-full bg-primary/20 transition-all duration-300"
                                 data-index="0"></button>
                             <button class="carousel-dot w-3 h-3 rounded-full bg-primary/20 transition-all duration-300"
@@ -437,6 +490,11 @@
                             <button class="carousel-dot w-3 h-3 rounded-full bg-primary/20 transition-all duration-300"
                                 data-index="4"></button>
                         </div>
+                        
+                        <!-- Next button -->
+                        <button id="carousel-next" class="w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-300 hover:bg-gray-50 group flex items-center justify-center">
+                            <i class="ri-arrow-left-s-line text-xl text-gray-600 group-hover:text-primary transition-colors duration-300"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -757,75 +815,121 @@
         </script>
         <script id="testimonials-carousel">
             document.addEventListener("DOMContentLoaded", function () {
-                const carousel = document.querySelector(".testimonials-carousel .flex");
-                const dots = document.querySelectorAll(".carousel-dot");
-                let currentIndex = 0;
-                let isAnimating = false;
-                const viewportWidth = window.innerWidth;
-                let itemsPerView = 1;
-                if (viewportWidth >= 1024) {
-                    itemsPerView = 3;
-                } else if (viewportWidth >= 768) {
-                    itemsPerView = 2;
-                }
-                function updateCarousel() {
-                    if (isAnimating) return;
-                    isAnimating = true;
-                    const itemWidth = carousel.children[0].offsetWidth + 32;
-                    const translateX = -currentIndex * itemWidth;
-                    carousel.style.transition = "transform 0.3s ease-in-out";
-                    carousel.style.transform = `translateX(${translateX}px)`;
-                    dots.forEach((dot, index) => {
-                        if (index === currentIndex) {
-                            dot.classList.add("bg-primary");
-                            dot.classList.remove("bg-primary/20");
+                if (document.querySelector(".testimonials-carousel")) {
+                    const carousel = document.querySelector("#testimonials-track");
+                    const dots = document.querySelectorAll(".carousel-dot");
+                    const prevBtn = document.querySelector("#carousel-prev");
+                    const nextBtn = document.querySelector("#carousel-next");
+                    let currentIndex = 0;
+                    let isAnimating = false;
+                    const totalItems = carousel.children.length;
+                    
+                    // Determine items per view based on screen size
+                    function getItemsPerView() {
+                        const viewportWidth = window.innerWidth;
+                        if (viewportWidth >= 1024) {
+                            return 3; // Large screens: 3 items
+                        } else if (viewportWidth >= 640) {
+                            return 2; // Medium screens: 2 items
                         } else {
-                            dot.classList.remove("bg-primary");
-                            dot.classList.add("bg-primary/20");
+                            return 1; // Small screens: 1 item
+                        }
+                    }
+                    
+                    let itemsPerView = getItemsPerView();
+                    
+                    // Update carousel position and dots
+                    function updateCarousel() {
+                        if (isAnimating) return;
+                        isAnimating = true;
+                        
+                        // Calculate item width based on responsive classes
+                        const itemsPerView = getItemsPerView();
+                        const itemWidth = 100 / itemsPerView; // Percentage width per item
+                        const translateX = -currentIndex * itemWidth;
+                        
+                        carousel.style.transition = "transform 0.3s ease-in-out";
+                        carousel.style.transform = `translateX(${translateX}%)`;
+                        
+                        // Update dots - show active dot based on current position
+                        dots.forEach((dot, index) => {
+                            if (index === currentIndex) {
+                                dot.classList.add("bg-primary");
+                                dot.classList.remove("bg-primary/20");
+                            } else {
+                                dot.classList.remove("bg-primary");
+                                dot.classList.add("bg-primary/20");
+                            }
+                        });
+                        
+                        setTimeout(() => {
+                            isAnimating = false;
+                        }, 300);
+                    }
+                    
+                    // Handle next button - infinite scroll
+                    function handleNext() {
+                        if (isAnimating) return;
+                        currentIndex = (currentIndex + 1) % totalItems;
+                        updateCarousel();
+                    }
+                    
+                    // Handle previous button - infinite scroll
+                    function handlePrev() {
+                        if (isAnimating) return;
+                        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+                        updateCarousel();
+                    }
+                    
+                    // Add event listeners for navigation buttons (reversed for RTL)
+                    nextBtn.addEventListener("click", handlePrev); // Left arrow goes to previous in RTL
+                    prevBtn.addEventListener("click", handleNext); // Right arrow goes to next in RTL
+                    
+                    // Dot navigation
+                    dots.forEach((dot, index) => {
+                        dot.addEventListener("click", () => {
+                            if (isAnimating) return;
+                            currentIndex = index;
+                            updateCarousel();
+                        });
+                    });
+                    
+                    // Autoplay functionality
+                    let autoplayInterval = null;
+                    function startAutoplay() {
+                        if (autoplayInterval) clearInterval(autoplayInterval);
+                        autoplayInterval = setInterval(handleNext, 5000);
+                    }
+                    
+                    function stopAutoplay() {
+                        if (autoplayInterval) {
+                            clearInterval(autoplayInterval);
+                            autoplayInterval = null;
+                        }
+                    }
+                    
+                    // Pause autoplay on hover
+                    const carouselContainer = document.querySelector(".testimonials-carousel");
+                    carouselContainer.addEventListener("mouseenter", stopAutoplay);
+                    carouselContainer.addEventListener("mouseleave", startAutoplay);
+                    
+                    // Handle window resize
+                    window.addEventListener('resize', () => {
+                        const newItemsPerView = getItemsPerView();
+                        if (newItemsPerView !== itemsPerView) {
+                            itemsPerView = newItemsPerView;
+                            // Adjust current index if needed
+                            if (currentIndex >= totalItems) {
+                                currentIndex = 0;
+                            }
+                            updateCarousel();
                         }
                     });
-                    setTimeout(() => {
-                        isAnimating = false;
-                    }, 300);
-                }
-                function handleNext() {
-                    if (isAnimating) return;
-                    if (currentIndex < carousel.children.length - itemsPerView) {
-                        currentIndex++;
-                    } else {
-                        currentIndex = 0;
-                    }
+                    
+                    // Initialize
                     updateCarousel();
+                    startAutoplay();
                 }
-                function handlePrev() {
-                    if (isAnimating) return;
-                    if (currentIndex > 0) {
-                        currentIndex--;
-                    } else {
-                        currentIndex = carousel.children.length - itemsPerView;
-                    }
-                    updateCarousel();
-                }
-
-                dots.forEach((dot, index) => {
-                    dot.addEventListener("click", () => {
-                        if (isAnimating) return;
-                        currentIndex = index;
-                        updateCarousel();
-                    });
-                });
-                let autoplayInterval = null;
-                function startAutoplay() {
-                    if (autoplayInterval) clearInterval(autoplayInterval);
-                    autoplayInterval = setInterval(handleNext, 5000);
-                }
-                function stopAutoplay() {
-                    if (autoplayInterval) clearInterval(autoplayInterval);
-                }
-                carousel.addEventListener("mouseenter", stopAutoplay);
-                carousel.addEventListener("mouseleave", startAutoplay);
-                startAutoplay();
-                updateCarousel();
             });
         </script>
         <script id="navbar-scroll">
@@ -881,6 +985,66 @@ document.addEventListener("DOMContentLoaded", function () {
             scrollToContact();
         });
     }
+    
+    // Mobile sidebar functionality
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileSidebar = document.getElementById("mobile-sidebar");
+    const sidebarPanel = document.getElementById("sidebar-panel");
+    const closeSidebarBtn = document.getElementById("close-sidebar-btn");
+    const sidebarBackdrop = document.getElementById("sidebar-backdrop");
+    const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+    const mobileCtaBtn = document.getElementById("mobile-cta-btn");
+    
+    function openSidebar() {
+        mobileSidebar.classList.remove("hidden");
+        setTimeout(() => {
+            sidebarPanel.classList.remove("translate-x-full");
+        }, 10);
+        document.body.style.overflow = "hidden";
+    }
+    
+    function closeSidebar() {
+        sidebarPanel.classList.add("translate-x-full");
+        setTimeout(() => {
+            mobileSidebar.classList.add("hidden");
+        }, 300);
+        document.body.style.overflow = "";
+    }
+    
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener("click", openSidebar);
+    }
+    
+    if (closeSidebarBtn) {
+        closeSidebarBtn.addEventListener("click", closeSidebar);
+    }
+    
+    if (sidebarBackdrop) {
+        sidebarBackdrop.addEventListener("click", closeSidebar);
+    }
+    
+    // Close sidebar when clicking on navigation links
+    mobileNavLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            closeSidebar();
+        });
+    });
+    
+    // Mobile CTA button
+    if (mobileCtaBtn) {
+        mobileCtaBtn.addEventListener("click", function(e) {
+            e.preventDefault();
+            closeSidebar();
+            scrollToContact();
+        });
+    }
+    
+    // Close sidebar on escape key
+    document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape" && !mobileSidebar.classList.contains("hidden")) {
+            closeSidebar();
+        }
+    });
 });
 </script>
         <script id="contact-form">
