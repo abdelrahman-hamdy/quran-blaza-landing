@@ -9,8 +9,7 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Tajawal:wght@300;400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Tajawal:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
     <script>
@@ -19,7 +18,7 @@
                 extend: {
                     colors: {
                         primary: "#1E3D59",
-                        secondary: "#C5A572",
+                        secondary: "#119f94",
                     },
                     borderRadius: {
                         none: "0px",
@@ -77,7 +76,7 @@
             bottom: -7px;
             width: 8px;
             height: 8px;
-            background: #C5A572;
+            background: #dbb000;
             border-radius: 50%;
             opacity: 0;
             transform: translateX(-50%) scale(0.3);
@@ -86,7 +85,7 @@
 
         .main-nav-link:hover,
         .main-nav-link:focus {
-            color: #C5A572 !important;
+            color: #dbb000 !important;
         }
 
         .main-nav-link:hover::after,
@@ -101,1054 +100,1341 @@
     <nav class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-500">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20 transition-all duration-500">
-                <div class="flex items-center">
-                    <div class="text-3xl font-cairo font-bold text-primary transition-all duration-500">قرآن بلازا</div>
+                <div class="flex items-center cursor-pointer hover:opacity-80 transition-opacity duration-300" id="logo-container">
+                    <img src="https://i.ibb.co/x8PSg2x9/6b249e5c-4f1f-4f60-8713-950172188849-Photoroom.png" alt="قرآن بلازا"
+                        class="h-16 w-auto transition-all duration-500">
+                    <span class="text-2xl font-cairo font-bold text-secondary mr-3 transition-all duration-500">قرآن بلازا</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8 space-x-reverse">
-                    <a href="#top"
-                        class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">الرئيسية</a>
-                    <a href="#features"
-                        class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">المميزات</a>
-                    <a href="#testimonials"
-                        class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">الآراء</a>
-                    <a href="#packages"
-                        class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">الباقات</a>
-                    <a id="navbar-contact-link" href="#contact"
-                        class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">تواصل
-                        معنا</a>
+                    <a href="#top" class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">الرئيسية</a>
+                    <a href="#features" class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">المميزات</a>
+                    <a href="#testimonials" class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">الآراء</a>
+                    <a href="#packages" class="main-nav-link text-lg text-gray-700 hover:scale-105 transition-all duration-300">الباقات</a>
+
                 </div>
-                <div class="flex items-center space-x-4 space-x-reverse">
-                    <button
-                        id="navbar-cta-btn"
-                        type="button"
-                        class="relative bg-[#1a365d] text-white px-4 sm:px-6 py-2 !rounded-button hover:bg-[#2d4a7c] transition-all duration-300 whitespace-nowrap overflow-hidden group text-sm sm:text-base">
-                        <span class="relative z-10">احجز الآن</span>
-                        <div class="absolute inset-0 w-full h-full">
-                            <div
-                                class="absolute inset-0 opacity-50 group-hover:opacity-100 transition-opacity duration-300">
-                                <div
-                                    class="absolute h-[500%] w-[200%] -top-[250%] left-[50%] bg-[radial-gradient(closest-side,rgba(255,255,255,0.2),transparent)] animate-[spin_8s_linear_infinite]">
-                                </div>
-                            </div>
-                        </div>
-                    </button>
-                    <!-- Mobile menu button -->
-                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 transition-colors duration-200">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
+
+
+
+                <!-- Social Media Icons -->
+                <div class="hidden lg:flex items-center space-x-3 space-x-reverse mr-4">
+                    <!-- Facebook -->
+                    <a href="https://facebook.com/share/1EnZysxnKb" target="_blank" rel="noopener"
+                        class="relative w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-all duration-300 group overflow-hidden">
+                        <i
+                            class="ri-facebook-fill text-white text-sm relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300"></i>
+                        <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://instagram.com/quranplaza" target="_blank" rel="noopener"
+                        class="relative w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center hover:from-purple-600 hover:to-pink-600 transition-all duration-300 group overflow-hidden">
+                        <i
+                            class="ri-instagram-fill text-white text-sm relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300"></i>
+                        <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
+                    </a>
+
+                    <!-- TikTok -->
+                    <a href="https://tiktok.com/@quranplaza7" target="_blank" rel="noopener"
+                        class="relative w-8 h-8 bg-black rounded-lg flex items-center justify-center hover:bg-gray-800 transition-all duration-300 group overflow-hidden">
+                        <i
+                            class="ri-tiktok-fill text-white text-sm relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300"></i>
+                        <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
+                    </a>
+
+                    <!-- Twitter/X -->
+                    <a href="https://x.com/Quran_plaza" target="_blank" rel="noopener"
+                        class="relative w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-all duration-300 group overflow-hidden">
+                        <i
+                            class="ri-twitter-x-fill text-white text-sm relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300"></i>
+                        <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
+                    </a>
                 </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn"
+                    class="md:hidden p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 transition-colors duration-200">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
         </div>
+        </div>
     </nav>
-    
+
     <!-- Mobile Sidebar -->
     <div id="mobile-sidebar" class="fixed inset-0 z-50 hidden">
         <!-- Backdrop -->
         <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" id="sidebar-backdrop"></div>
-        
+
         <!-- Sidebar -->
-        <div class="fixed top-0 right-0 h-full w-80 bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out" id="sidebar-panel">
+        <div class="fixed top-0 right-0 h-full w-80 bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out"
+            id="sidebar-panel">
             <div class="flex items-center justify-between p-6 border-b">
-                <div class="text-2xl font-cairo font-bold text-primary">قرآن بلازا</div>
-                <button id="close-sidebar-btn" class="p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 transition-colors duration-200">
+                <div class="flex items-center">
+                    <img src="https://i.ibb.co/x8PSg2x9/6b249e5c-4f1f-4f60-8713-950172188849-Photoroom.png" alt="قرآن بلازا" class="h-14 w-auto">
+                    <span class="text-xl font-cairo font-bold text-secondary mr-3">قرآن بلازا</span>
+                </div>
+                <button id="close-sidebar-btn"
+                    class="p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 transition-colors duration-200">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
             </div>
-            
+
             <nav class="p-6">
                 <ul class="space-y-4">
-                    <li><a href="#top" class="mobile-nav-link block py-3 px-4 text-lg text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200">الرئيسية</a></li>
-                    <li><a href="#features" class="mobile-nav-link block py-3 px-4 text-lg text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200">المميزات</a></li>
-                    <li><a href="#testimonials" class="mobile-nav-link block py-3 px-4 text-lg text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200">الآراء</a></li>
-                    <li><a href="#packages" class="mobile-nav-link block py-3 px-4 text-lg text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200">الباقات</a></li>
-                    <li><a href="#contact" class="mobile-nav-link block py-3 px-4 text-lg text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200">تواصل معنا</a></li>
+                    <li><a href="#top"
+                            class="mobile-nav-link block py-3 px-4 text-lg text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200">الرئيسية</a>
+                    </li>
+                    <li><a href="#features"
+                            class="mobile-nav-link block py-3 px-4 text-lg text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200">المميزات</a>
+                    </li>
+                    <li><a href="#testimonials"
+                            class="mobile-nav-link block py-3 px-4 text-lg text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200">الآراء</a>
+                    </li>
+                    <li><a href="#packages"
+                            class="mobile-nav-link block py-3 px-4 text-lg text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200">الباقات</a>
+                    </li>
+
                 </ul>
-                
+
                 <div class="mt-8 pt-6 border-t">
-                    <button id="mobile-cta-btn" class="w-full bg-secondary text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300">
+                    <button id="mobile-cta-btn"
+                        class="w-full bg-secondary text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300">
                         احجز حصتك التجريبية مجاناً
                     </button>
                 </div>
             </nav>
         </div>
     </div>
-        <section
-            class="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-blue-50/80 via-white to-amber-50/80">
-            <!-- Background decorations - responsive -->
-            <div class="absolute top-10 sm:top-20 right-10 sm:right-20 w-32 sm:w-48 md:w-96 h-32 sm:h-48 md:h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-32 sm:w-48 md:w-96 h-32 sm:h-48 md:h-96 bg-secondary opacity-5 rounded-full blur-3xl"></div>
-            <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[600px] md:w-[800px] h-[400px] sm:h-[600px] md:h-[800px] bg-blue-100 opacity-5 rounded-full blur-3xl">
-            </div>
-            
-            <div class="relative z-10 w-full py-10 sm:py-16 md:py-20">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <!-- Mobile-first responsive layout -->
-                    <div class="flex flex-col lg:flex-row-reverse items-center justify-between gap-8 lg:gap-16">
-                        <!-- Image section -->
-                        <div class="w-full lg:w-1/2 order-1 lg:order-2">
-                            <img src="https://i.ibb.co/jP1cHJ01/quran-children-image.png"
-                                alt="Happy children learning Quran" class="w-full h-auto max-w-md mx-auto lg:max-w-none">
-                        </div>
-                        
-                        <!-- Content section -->
-                        <div class="w-full lg:w-1/2 text-center lg:text-right order-2 lg:order-1">
-                            <h1
-                                class="text-3xl sm:text-4xl md:text-5xl font-cairo font-bold text-primary mb-4 sm:mb-6 leading-[1.2] sm:leading-[1.25] md:leading-[1.3] lg:leading-[1.4]">
-                                رحلتك مع كتاب الله<br>تبدأ من هنا
-                            </h1>
-                            <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                                نقدم لأبنائك تجربة فريدة في تعلم وحفظ القرآن الكريم مع معلمين متخصصين. نهتم بغرس حب
-                                القرآن في قلوبهم من خلال أساليب
-                                تعليمية حديثة ومتطورة، مع مراعاة الفروق الفردية وتقديم الدعم المستمر لضمان تحقيق أفضل
-                                النتائج
-                            </p>
-                            <button
-                                id="hero-cta-btn"
-                                type="button"
-                                class="group bg-secondary text-white px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 text-base sm:text-lg md:text-xl font-semibold !rounded-button hover:bg-opacity-90 transition-all transform hover:scale-105 hover:shadow-xl relative overflow-hidden w-full sm:w-auto">
-                                <span class="relative z-10">احجز حصتك التجريبية مجاناً</span>
-                                <div
-                                    class="absolute inset-0 bg-white opacity-20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300">
-                                </div>
-                            </button>
-                            
-                            <!-- Stats section - responsive -->
-                            <div class="mt-8 sm:mt-12 md:mt-16 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 sm:gap-8 md:gap-12">
-                                <div class="flex flex-col items-center">
-                                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mb-2 sm:mb-3">
-                                        <i class="ri-user-3-line text-xl sm:text-2xl text-primary"></i>
-                                    </div>
-                                    <div class="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 counter bg-gradient-to-r from-[#C5A572] to-[#a88b53] bg-clip-text text-transparent"
-                                        data-target="1000">0</div>
-                                    <div class="text-sm sm:text-base text-gray-600">طالب وطالبة</div>
-                                </div>
-                                <div class="hidden sm:block w-px h-12 md:h-16 bg-gray-200"></div>
-                                <div class="flex flex-col items-center">
-                                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mb-2 sm:mb-3">
-                                        <i class="ri-team-line text-xl sm:text-2xl text-primary"></i>
-                                    </div>
-                                    <div class="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 counter bg-gradient-to-r from-[#C5A572] to-[#a88b53] bg-clip-text text-transparent"
-                                        data-target="50">0</div>
-                                    <div class="text-sm sm:text-base text-gray-600">معلم ومعلمة</div>
-                                </div>
-                                <div class="hidden sm:block w-px h-12 md:h-16 bg-gray-200"></div>
-                                <div class="flex flex-col items-center">
-                                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mb-2 sm:mb-3">
-                                        <i class="ri-star-line text-xl sm:text-2xl text-primary"></i>
-                                    </div>
-                                    <div class="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 counter bg-gradient-to-r from-[#C5A572] to-[#a88b53] bg-clip-text text-transparent"
-                                        data-target="95">0</div>
-                                    <div class="text-sm sm:text-base text-gray-600">نسبة الرضا</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        </section>
-        <section id="features" class="py-20 relative overflow-hidden">
-             <div class="absolute inset-0 bg-[url('https://img.freepik.com/premium-vector/abstract-geometric-pattern-with-crosses-stripes-lines-seamless-vector-background-white-gold-ornament-modern-reticulated-graphic-design_976307-3445.jpg?w=2000')] bg-repeat bg-[size:360px] opacity-20"></div>
-             <div class="absolute inset-0 bg-[#0488ff] opacity-10"></div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-cairo font-bold text-primary mb-4 animate-fade-in">لماذا قرآن بلازا؟</h2>
-                    <p class="text-xl text-gray-600">مميزات تجعلنا الخيار الأول لتحفيظ القرآن الكريم</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div
-                        class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center border border-gray-100 hover:border-secondary/20">
-                        <div
-                            class="w-20 h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300">
-                            <i
-                                class="ri-user-star-line text-3xl text-primary group-hover:text-secondary transition-colors duration-300"></i>
-                        </div>
-                        <h3
-                            class="text-xl font-cairo font-semibold text-primary mb-3 group-hover:text-secondary transition-colors duration-300">
-                            معلمون ومعلمات متخصصون</h3>
-                        <p class="text-gray-600">نخبة من المعلمين الحاصلين على إجازات في القرآن الكريم والتجويد</p>
-                    </div>
-                    <div
-                        class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center border border-gray-100 hover:border-secondary/20">
-                        <div
-                            class="w-20 h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300">
-                            <i
-                                class="ri-book-open-line text-3xl text-primary group-hover:text-secondary transition-colors duration-300"></i>
-                        </div>
-                        <h3
-                            class="text-xl font-cairo font-semibold text-primary mb-3 group-hover:text-secondary transition-colors duration-300">
-                            حفظ ومراجعة بإشراف مباشر</h3>
-                        <p class="text-gray-600">متابعة يومية للحفظ والمراجعة مع تصحيح الأخطاء فورياً</p>
-                    </div>
-                    <div
-                        class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center border border-gray-100 hover:border-secondary/20">
-                        <div
-                            class="w-20 h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300">
-                            <i
-                                class="ri-time-line text-3xl text-primary group-hover:text-secondary transition-colors duration-300"></i>
-                        </div>
-                        <h3
-                            class="text-xl font-cairo font-semibold text-primary mb-3 group-hover:text-secondary transition-colors duration-300">
-                            مرونة في المواعيد</h3>
-                        <p class="text-gray-600">اختر الأوقات التي تناسبك مع إمكانية تغيير المواعيد بسهولة</p>
-                    </div>
-                    <div
-                        class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center border border-gray-100 hover:border-secondary/20">
-                        <div
-                            class="w-20 h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300">
-                            <i
-                                class="ri-file-chart-line text-3xl text-primary group-hover:text-secondary transition-colors duration-300"></i>
-                        </div>
-                        <h3
-                            class="text-xl font-cairo font-semibold text-primary mb-3 group-hover:text-secondary transition-colors duration-300">
-                            تقارير دورية لأولياء الأمور</h3>
-                        <p class="text-gray-600">تقارير مفصلة عن تقدم الطالب وحضوره ومستوى حفظه</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="testimonials"
-            class="py-20 relative overflow-hidden bg-gradient-to-br from-gray-50/50 via-white to-gray-50/50">
-            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50/80 via-white to-amber-50/80">
-            </div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pb-12">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-cairo font-bold text-primary mb-4">ماذا يقول طلابنا؟</h2>
-                    <p class="text-xl text-gray-600">شهادات حقيقية من طلاب وأولياء أمور</p>
-                </div>
-                <div class="relative testimonials-carousel">
-                    <div class="overflow-hidden px-4 py-8">
-                        <div class="flex transition-transform duration-500 ease-in-out items-center" id="testimonials-track">
-                            <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
-                                <div
-                                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-                                    <div class="flex items-center justify-between mb-6">
-                                        <div class="flex items-center">
-                                            <img src="https://readdy.ai/api/search-image?query=professional%20muslim%20woman%20teacher%20wearing%20hijab%20smiling%20warmly%2C%20clean%20white%20background%2C%20portrait%20style%2C%20professional%20lighting%2C%20confident%20and%20friendly%20expression&width=80&height=80&seq=test001&orientation=squarish"
-                                                alt="أم محمد"
-                                                class="w-16 h-16 rounded-full object-cover ml-4 ring-2 ring-secondary/20">
-                                            <div>
-                                                <h4 class="font-semibold text-primary text-lg">أم محمد العلي</h4>
-                                                <p class="text-sm text-gray-600">ولي أمر</p>
-                                            </div>
-                                        </div>
-                                        <div class="w-8 h-8 flex items-center justify-center">
-                                            <i class="ri-double-quotes-r text-2xl text-secondary/30"></i>
-                                        </div>
-                                    </div>
-                                    <div class="flex mb-4">
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                    </div>
-                                    <p class="text-gray-700 leading-relaxed">
-                                        "ابنتي تحفظ مع الأستاذة فاطمة منذ 6 أشهر وأرى تطوراً مذهلاً في حفظها وتلاوتها.
-                                        المعلمة صبورة ومتفانية والمتابعة ممتازة."
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
-                                <div
-                                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-                                    <div class="flex items-center justify-between mb-6">
-                                        <div class="flex items-center">
-                                            <img src="https://readdy.ai/api/search-image?query=young%20muslim%20man%20student%20smiling%20confidently%2C%20clean%20white%20background%2C%20portrait%20style%2C%20professional%20lighting%2C%20wearing%20traditional%20islamic%20clothing&width=80&height=80&seq=test002&orientation=squarish"
-                                                alt="أحمد الشريف"
-                                                class="w-16 h-16 rounded-full object-cover ml-4 ring-2 ring-secondary/20">
-                                            <div>
-                                                <h4 class="font-semibold text-primary text-lg">أحمد الشريف</h4>
-                                                <p class="text-sm text-gray-600">طالب</p>
-                                            </div>
-                                        </div>
-                                        <div class="w-8 h-8 flex items-center justify-center">
-                                            <i class="ri-double-quotes-r text-2xl text-secondary/30"></i>
-                                        </div>
-                                    </div>
-                                    <div class="flex mb-4">
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                    </div>
-                                    <p class="text-gray-700 leading-relaxed">
-                                        "أحفظ مع الأستاذ عبد الرحمن وهو معلم رائع. يشرح لي أحكام التجويد بطريقة سهلة
-                                        ويصحح أخطائي بصبر. أنصح الجميع بالمنصة."
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
-                                <div
-                                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-                                    <div class="flex items-center justify-between mb-6">
-                                        <div class="flex items-center">
-                                            <img src="https://readdy.ai/api/search-image?query=middle%20aged%20muslim%20father%20smiling%20warmly%2C%20clean%20white%20background%2C%20portrait%20style%2C%20professional%20lighting%2C%20traditional%20islamic%20appearance&width=80&height=80&seq=test003&orientation=squarish"
-                                                alt="محمد الأحمد"
-                                                class="w-16 h-16 rounded-full object-cover ml-4 ring-2 ring-secondary/20">
-                                            <div>
-                                                <h4 class="font-semibold text-primary text-lg">محمد الأحمد</h4>
-                                                <p class="text-sm text-gray-600">ولي أمر</p>
-                                            </div>
-                                        </div>
-                                        <div class="w-8 h-8 flex items-center justify-center">
-                                            <i class="ri-double-quotes-r text-2xl text-secondary/30"></i>
-                                        </div>
-                                    </div>
-                                    <div class="flex mb-4">
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                    </div>
-                                    <p class="text-gray-700 leading-relaxed">
-                                        "أولادي الثلاثة يحفظون في المنصة والحمد لله النتائج رائعة. المرونة في المواعيد
-                                        والتقارير الدورية تساعدني في متابعتهم."
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
-                                <div
-                                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-                                    <div class="flex items-center justify-between mb-6">
-                                        <div class="flex items-center">
-                                            <img src="https://readdy.ai/api/search-image?query=professional%20muslim%20woman%20teacher%20wearing%20hijab%20smiling%20warmly%2C%20clean%20white%20background%2C%20portrait%20style%2C%20professional%20lighting%2C%20confident%20and%20friendly%20expression&width=80&height=80&seq=test001&orientation=squarish"
-                                                alt="أم محمد"
-                                                class="w-16 h-16 rounded-full object-cover ml-4 ring-2 ring-secondary/20">
-                                            <div>
-                                                <h4 class="font-semibold text-primary text-lg">أم محمد العلي</h4>
-                                                <p class="text-sm text-gray-600">ولي أمر</p>
-                                            </div>
-                                        </div>
-                                        <div class="w-8 h-8 flex items-center justify-center">
-                                            <i class="ri-double-quotes-r text-2xl text-secondary/30"></i>
-                                        </div>
-                                    </div>
-                                    <div class="flex mb-4">
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                    </div>
-                                    <p class="text-gray-700 leading-relaxed">
-                                        "ابنتي تحفظ مع الأستاذة فاطمة منذ 6 أشهر وأرى تطوراً مذهلاً في حفظها وتلاوتها. المعلمة صبورة ومتفانية والمتابعة ممتازة."
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
-                                <div
-                                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-                                    <div class="flex items-center justify-between mb-6">
-                                        <div class="flex items-center">
-                                            <img src="https://readdy.ai/api/search-image?query=young%20muslim%20man%20student%20smiling%20confidently%2C%20clean%20white%20background%2C%20portrait%20style%2C%20professional%20lighting%2C%20wearing%20traditional%20islamic%20clothing&width=80&height=80&seq=test002&orientation=squarish"
-                                                alt="أحمد الشريف"
-                                                class="w-16 h-16 rounded-full object-cover ml-4 ring-2 ring-secondary/20">
-                                            <div>
-                                                <h4 class="font-semibold text-primary text-lg">أحمد الشريف</h4>
-                                                <p class="text-sm text-gray-600">طالب</p>
-                                            </div>
-                                        </div>
-                                        <div class="w-8 h-8 flex items-center justify-center">
-                                            <i class="ri-double-quotes-r text-2xl text-secondary/30"></i>
-                                        </div>
-                                    </div>
-                                    <div class="flex mb-4">
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                    </div>
-                                    <p class="text-gray-700 leading-relaxed">
-                                        "أحفظ مع الأستاذ عبد الرحمن وهو معلم رائع. يشرح لي أحكام التجويد بطريقة سهلة ويصحح أخطائي بصبر. أنصح الجميع بالمنصة."
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
-                                <div
-                                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-                                    <div class="flex items-center justify-between mb-6">
-                                        <div class="flex items-center">
-                                            <img src="https://readdy.ai/api/search-image?query=middle%20aged%20muslim%20father%20smiling%20warmly%2C%20clean%20white%20background%2C%20portrait%20style%2C%20professional%20lighting%2C%20traditional%20islamic%20appearance&width=80&height=80&seq=test003&orientation=squarish"
-                                                alt="محمد الأحمد"
-                                                class="w-16 h-16 rounded-full object-cover ml-4 ring-2 ring-secondary/20">
-                                            <div>
-                                                <h4 class="font-semibold text-primary text-lg">محمد الأحمد</h4>
-                                                <p class="text-sm text-gray-600">ولي أمر</p>
-                                            </div>
-                                        </div>
-                                        <div class="w-8 h-8 flex items-center justify-center">
-                                            <i class="ri-double-quotes-r text-2xl text-secondary/30"></i>
-                                        </div>
-                                    </div>
-                                    <div class="flex mb-4">
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                    </div>
-                                    <p class="text-gray-700 leading-relaxed">
-                                        "أولادي الثلاثة يحفظون في المنصة والحمد لله النتائج رائعة. المرونة في المواعيد والتقارير الدورية تساعدني في متابعتهم."
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex justify-center items-center mt-8 gap-4">
-                        <!-- Previous button -->
-                        <button id="carousel-prev" class="w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-300 hover:bg-gray-50 group flex items-center justify-center">
-                            <i class="ri-arrow-right-s-line text-xl text-gray-600 group-hover:text-primary transition-colors duration-300"></i>
-                        </button>
-                        
-                        <!-- Dots -->
-                        <div class="flex gap-2" id="carousel-dots">
-                            <button class="carousel-dot w-3 h-3 rounded-full bg-primary/20 transition-all duration-300"
-                                data-index="0"></button>
-                            <button class="carousel-dot w-3 h-3 rounded-full bg-primary/20 transition-all duration-300"
-                                data-index="1"></button>
-                        </div>
-                        
-                        <!-- Next button -->
-                        <button id="carousel-next" class="w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-300 hover:bg-gray-50 group flex items-center justify-center">
-                            <i class="ri-arrow-left-s-line text-xl text-gray-600 group-hover:text-primary transition-colors duration-300"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="packages" class="py-20 bg-gray-50">
+    <section class="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#119f94]/10 via-white to-amber-50/80">
+        <!-- Background decorations - responsive -->
+        <div
+            class="absolute top-10 sm:top-20 right-10 sm:right-20 w-32 sm:w-48 md:w-96 h-32 sm:h-48 md:h-96 bg-primary opacity-5 rounded-full blur-3xl">
+        </div>
+        <div
+            class="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-32 sm:w-48 md:w-96 h-32 sm:h-48 md:h-96 bg-secondary opacity-5 rounded-full blur-3xl">
+        </div>
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[600px] md:w-[800px] h-[400px] sm:h-[600px] md:h-[800px] bg-blue-100 opacity-5 rounded-full blur-3xl">
+        </div>
+
+        <div class="relative z-10 w-full py-10 sm:py-16 md:py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-cairo font-bold text-primary mb-4">باقاتنا المميزة</h2>
-                    <p class="text-xl text-gray-600">اختر الباقة التي تناسب احتياجاتك</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <div class="text-center">
-                            <h3 class="text-2xl font-cairo font-bold text-primary mb-2">باقة الأساس</h3>
-                            <div class="text-4xl font-bold text-secondary mb-4">
-                                ٦٩٩ ج.م
-                                <span class="text-lg text-gray-600 font-normal">/شهرياً</span>
-                            </div>
-                            <ul class="text-right space-y-3 mb-8">
-                                <li class="flex items-center">
-                                    <i class="ri-check-line text-green-500 ml-2"></i>
-                                    ٨ حصص شهرياً
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="ri-check-line text-green-500 ml-2"></i>
-                                    مدة الحصة ٣٠ دقيقة
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="ri-check-line text-green-500 ml-2"></i>
-                                    تحفيظ القرآن الكريم (حفظ ومراجعة)
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="ri-check-line text-green-500 ml-2"></i>
-                                    دروس التجويد حسب المستوى
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="ri-check-line text-green-500 ml-2"></i>
-                                    دروس الثقافة الإسلامية
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="ri-check-line text-green-500 ml-2"></i>
-                                    تأسيس قواعد القراءة والكتابة
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="ri-check-line text-green-500 ml-2"></i>
-                                    محتوى تفاعلي عبر المنصة
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="ri-check-line text-green-500 ml-2"></i>
-                                    متابعة فردية خاصة
-                                </li>
-                            </ul>
-                            <button
-                                class="subscriptionButton basicPackage w-full bg-primary text-white py-3 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
-                                اشترك الآن
-                            </button>
-                        </div>
+                <!-- Mobile-first responsive layout -->
+                <div class="flex flex-col lg:flex-row-reverse items-center justify-between gap-8 lg:gap-16">
+                    <!-- Image section -->
+                    <div class="w-full lg:w-1/2 order-1 lg:order-2">
+                        <img src="https://i.ibb.co/bjRJvdhd/Chat-GPT-Image-Jul-19-2025-04-02-38-AM-Photoroom.png" alt="Happy children learning Quran"
+                            class="w-full h-auto max-w-md mx-auto lg:max-w-none">
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-secondary relative">
-                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                            <span class="bg-secondary text-white px-4 py-1 rounded-full text-sm font-semibold">الأكثر
-                                شعبية</span>
-                        </div>
-                        <div class="text-center">
-                            <h3 class="text-2xl font-cairo font-bold text-primary mb-2">باقة التميز</h3>
-                            <div class="text-4xl font-bold text-secondary mb-4">
-                                ٨٠٠ ج.م
-                                <span class="text-lg text-gray-600 font-normal">/شهرياً</span>
-                            </div>
-                            <ul class="text-right space-y-3 mb-8">
-                                <li class="flex items-center">
-                                    <i class="ri-check-line text-green-500 ml-2"></i>
-                                    ٨ حصص شهرياً
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="ri-check-line text-green-500 ml-2"></i>
-                                    مدة الحصة ٣٠ دقيقة
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="ri-check-line text-green-500 ml-2"></i>
-                                    جميع مميزات باقة الأساس
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="ri-check-line text-green-500 ml-2"></i>
-                                    دعم إضافي في مهارات التدبر والتفكير
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="ri-check-line text-green-500 ml-2"></i>
-                                    التركيز على مهارات السلوك القيمي
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="ri-check-line text-green-500 ml-2"></i>
-                                    اختبار دوري وتقرير شهري
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="ri-check-line text-green-500 ml-2"></i>
-                                    مرونة أكبر في جدولة الحصص
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="ri-check-line text-green-500 ml-2"></i>
-                                    إمكانية التواصل مع معلم خاص
-                                </li>
-                            </ul>
-                            <button
-                                class="subscriptionButton advancedPackage w-full bg-secondary text-white py-3 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
-                                اشترك الآن
-                            </button>
-                        </div>
-                    </div>
-                    <div class="bg-gradient-to-br from-primary/5 to-secondary/5 p-8 rounded-xl">
-                        <div class="text-center">
-                            <h3 class="text-2xl font-cairo font-bold text-primary mb-6">مميزات عامة</h3>
-                            <ul class="text-right space-y-4">
-                                <li class="flex items-center">
-                                    <i class="ri-shield-star-line text-secondary ml-3 text-xl"></i>
-                                    <div>
-                                        <h4 class="font-semibold text-primary">معلمون مؤهلون</h4>
-                                        <p class="text-gray-600 text-sm">حاصلون على إجازات في القرآن والتجويد</p>
-                                    </div>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="ri-device-line text-secondary ml-3 text-xl"></i>
-                                    <div>
-                                        <h4 class="font-semibold text-primary">منصة تعليمية متطورة</h4>
-                                        <p class="text-gray-600 text-sm">سهلة الاستخدام وآمنة للأطفال</p>
-                                    </div>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="ri-calendar-check-line text-secondary ml-3 text-xl"></i>
-                                    <div>
-                                        <h4 class="font-semibold text-primary">مرونة في المواعيد</h4>
-                                        <p class="text-gray-600 text-sm">اختر الوقت المناسب لجدولك</p>
-                                    </div>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="ri-group-line text-secondary ml-3 text-xl"></i>
-                                    <div>
-                                        <h4 class="font-semibold text-primary">دعم مستمر</h4>
-                                        <p class="text-gray-600 text-sm">فريق متخصص لمساعدتك على مدار الساعة</p>
-                                    </div>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="ri-award-line text-secondary ml-3 text-xl"></i>
-                                    <div>
-                                        <h4 class="font-semibold text-primary">شهادات معتمدة</h4>
-                                        <p class="text-gray-600 text-sm">عند إتمام كل مستوى من الحفظ</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="relative py-20 overflow-hidden">
-            <div class="absolute inset-0 bg-[url('https://img.freepik.com/premium-vector/abstract-geometric-pattern-with-crosses-stripes-lines-seamless-vector-background-white-gold-ornament-modern-reticulated-graphic-design_976307-3445.jpg?w=2000')] bg-repeat bg-[size:360px] opacity-20"></div>
-            <div class="absolute inset-0 bg-[#0488ff] opacity-10"></div>
-            <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-cairo font-bold text-primary mb-4">تواصل معنا</h2>
-                    <p class="text-xl text-gray-600">نحن هنا لمساعدتك في بدء رحلتك مع القرآن الكريم</p>
-                </div>
-                <form id="contact-form"
-                    class="bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-lg border border-gray-100">
-                    <div class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-right text-gray-700 mb-2">الاسم</label>
-                            <input type="text" id="name" name="name" required
-                                class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
-                                placeholder="أدخل اسمك الكريم">
-                        </div>
-                        <div>
-                            <label for="age" class="block text-right text-gray-700 mb-2">السن</label>
-                            <input type="number" id="age" name="age" required min="5" max="99"
-                                class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
-                                placeholder="أدخل عمرك">
-                        </div>
-                        <div>
-                            <label for="package" class="block text-right text-gray-700 mb-2">الباقة المطلوبة</label>
-                            <div class="relative">
-                                <select id="package" name="package" required
-                                    class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors appearance-none bg-white">
-                                    <option value="" disabled selected>اختر الباقة المناسبة</option>
-                                    <option value="basic">باقة الأساس - ٦٩٩</option>
-                                    <option value="advanced">باقة التميز - ٨٠٠</option>
-                                </select>
-                                <div class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
-                                    <i class="ri-arrow-down-s-line text-gray-400"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-right text-gray-700 mb-2">رسالة إضافية
-                                (اختياري)</label>
-                            <textarea id="message" name="message" rows="4" maxlength="500"
-                                class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"
-                                placeholder="اكتب رسالتك هنا..."></textarea>
-                            <div class="text-left text-sm text-gray-500 mt-1">
-                                <span id="char-count">0</span>/500
-                            </div>
-                        </div>
-                        <button type="submit"
-                            class="w-full bg-primary text-white py-4 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap group relative overflow-hidden">
-                            <span class="relative z-10">إرسال الطلب</span>
-                            <div class="absolute inset-0 w-full h-full">
-                                <div
-                                    class="absolute inset-0 opacity-50 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div
-                                        class="absolute h-[500%] w-[200%] -top-[250%] left-[50%] bg-[radial-gradient(closest-side,rgba(255,255,255,0.2),transparent)] animate-[spin_8s_linear_infinite]">
-                                    </div>
-                                </div>
-                            </div>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <footer class="bg-primary text-white py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div>
-                        <div class="text-2xl font-cairo font-bold mb-4">قرآن بلازا</div>
-                        <p class="text-gray-300 mb-4">
-                            منصة متخصصة في تعليم وتحفيظ القرآن الكريم للصغار والكبار بأحدث الطرق التعليمية
+
+                    <!-- Content section -->
+                    <div class="w-full lg:w-1/2 text-center lg:text-right order-2 lg:order-1">
+                        <h1
+                            class="text-3xl sm:text-4xl md:text-5xl font-cairo font-bold text-primary mb-4 sm:mb-6 leading-[1.2] sm:leading-[1.25] md:leading-[1.3] lg:leading-[1.4]">
+                            رحلتك مع كتاب الله<br>تبدأ من هنا
+                        </h1>
+                        <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            نقدم لأبنائك تجربة فريدة في تعلم وحفظ القرآن الكريم مع معلمين متخصصين. نهتم بغرس حب
+                            القرآن في قلوبهم من خلال أساليب
+                            تعليمية حديثة ومتطورة، مع مراعاة الفروق الفردية وتقديم الدعم المستمر لضمان تحقيق أفضل
+                            النتائج
                         </p>
+                        <button id="hero-cta-btn" type="button"
+                            class="group bg-secondary text-white px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 text-base sm:text-lg md:text-xl font-semibold !rounded-button hover:bg-opacity-90 transition-all transform hover:scale-105 hover:shadow-xl relative overflow-hidden w-full sm:w-auto">
+                            <span class="relative z-10">احجز حصتك التجريبية مجاناً</span>
+                            <div
+                                class="absolute inset-0 bg-white opacity-20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300">
+                            </div>
+                        </button>
+
+                        <!-- Stats section - responsive -->
+                        <div
+                            class="mt-8 sm:mt-12 md:mt-16 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 sm:gap-8 md:gap-12">
+                            <div class="flex flex-col items-center">
+                                <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mb-2 sm:mb-3">
+                                    <i class="ri-user-3-line text-xl sm:text-2xl text-primary"></i>
+                                </div>
+                                <div class="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 counter bg-gradient-to-r from-[#a58400] to-[#dbb000] bg-clip-text text-transparent"
+                                    data-target="1000">0</div>
+                                <div class="text-sm sm:text-base text-gray-600">طالب وطالبة</div>
+                            </div>
+                            <div class="hidden sm:block w-px h-12 md:h-16 bg-gray-200"></div>
+                            <div class="flex flex-col items-center">
+                                <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mb-2 sm:mb-3">
+                                    <i class="ri-team-line text-xl sm:text-2xl text-primary"></i>
+                                </div>
+                                <div class="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 counter bg-gradient-to-r from-[#a58400] to-[#dbb000] bg-clip-text text-transparent"
+                                    data-target="50">0</div>
+                                <div class="text-sm sm:text-base text-gray-600">معلم ومعلمة</div>
+                            </div>
+                            <div class="hidden sm:block w-px h-12 md:h-16 bg-gray-200"></div>
+                            <div class="flex flex-col items-center">
+                                <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mb-2 sm:mb-3">
+                                    <i class="ri-star-line text-xl sm:text-2xl text-primary"></i>
+                                </div>
+                                <div class="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 counter bg-gradient-to-r from-[#a58400] to-[#dbb000] bg-clip-text text-transparent"
+                                    data-target="95">0</div>
+                                <div class="text-sm sm:text-base text-gray-600">نسبة الرضا</div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h4 class="text-lg font-semibold mb-4">روابط سريعة</h4>
-                        <ul class="space-y-2">
-                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">من نحن</a></li>
-                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">المعلمون</a></li>
-                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">الباقات</a></li>
-                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">سياسة الخصوصية</a>
+                </div>
+    </section>
+    <section id="features" class="py-28 relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-[url('https://img.freepik.com/premium-vector/abstract-geometric-pattern-with-crosses-stripes-lines-seamless-vector-background-white-gold-ornament-modern-reticulated-graphic-design_976307-3445.jpg?w=2000')] bg-repeat bg-[size:360px] opacity-15">
+        </div>
+        <div class="absolute inset-0 bg-[#119f94] opacity-5"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-cairo font-bold text-primary mb-4 animate-fade-in">لماذا قرآن بلازا؟</h2>
+                <p class="text-xl text-gray-600">مميزات تجعلنا الخيار الأول لتحفيظ القرآن الكريم</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                    class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:bg-gradient-to-br hover:from-[#0086ff0d] hover:to-[#e0d9000d] transition-all duration-500 transform hover:-translate-y-2 text-center border border-gray-100 hover:border-secondary/20">
+                    <div
+                        class="w-32 h-32 bg-transparent rounded-2xl flex items-center justify-center mx-auto mb-6 transform transition-transform duration-300 overflow-hidden relative">
+                        <img src="https://i.ibb.co/Q7Wv5rW3/Chat-GPT-Image-Jul-19-2025-07-14-09-AM-Photoroom.png" alt="معلمون متخصصون"
+                            class="w-24 h-24 object-cover rounded-xl group-hover:scale-[1.3] transition-all duration-500">
+                    </div>
+                    <h3 class="text-xl font-cairo font-semibold text-primary mb-3 group-hover:text-secondary transition-colors duration-300">
+                        معلمون ومعلمات متخصصون</h3>
+                    <p class="text-gray-600">نخبة من المعلمين الحاصلين على إجازات في القرآن الكريم والتجويد</p>
+                </div>
+                <div
+                    class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:bg-gradient-to-br hover:from-[#0086ff0d] hover:to-[#e0d9000d] transition-all duration-500 transform hover:-translate-y-2 text-center border border-gray-100 hover:border-secondary/20">
+                    <div
+                        class="w-32 h-32 bg-transparent rounded-2xl flex items-center justify-center mx-auto mb-6 transform transition-transform duration-300 overflow-hidden relative">
+                        <img src="https://i.ibb.co/353J9Tf2/Chat-GPT-Image-Jul-19-2025-06-18-40-AM-Photoroom.png" alt="دروس التجويد والتفسير"
+                            class="w-24 h-24 object-cover rounded-xl group-hover:scale-[1.3] transition-all duration-500">
+                    </div>
+                    <h3 class="text-xl font-cairo font-semibold text-primary mb-3 group-hover:text-secondary transition-colors duration-300">
+                        دروس مبسطة في التجويد والتفسير</h3>
+                    <p class="text-gray-600">دروس مبسطة ومفيدة في أحكام التجويد وتفسير القرآن الكريم</p>
+                </div>
+                <div
+                    class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:bg-gradient-to-br hover:from-[#0086ff0d] hover:to-[#e0d9000d] transition-all duration-500 transform hover:-translate-y-2 text-center border border-gray-100 hover:border-secondary/20">
+                    <div
+                        class="w-32 h-32 bg-transparent rounded-2xl flex items-center justify-center mx-auto mb-6 transform transition-transform duration-300 overflow-hidden relative">
+                        <img src="https://i.ibb.co/dw7NypfQ/Chat-GPT-Image-Jul-19-2025-06-18-35-AM-Photoroom.png" alt="مرونة في المواعيد"
+                            class="w-24 h-24 object-cover rounded-xl group-hover:scale-[1.3] transition-all duration-500">
+                    </div>
+                    <h3 class="text-xl font-cairo font-semibold text-primary mb-3 group-hover:text-secondary transition-colors duration-300">
+                        مرونة في المواعيد</h3>
+                    <p class="text-gray-600">اختر الأوقات التي تناسبك مع إمكانية تغيير المواعيد بسهولة</p>
+                </div>
+                <div
+                    class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:bg-gradient-to-br hover:from-[#0086ff0d] hover:to-[#e0d9000d] transition-all duration-500 transform hover:-translate-y-2 text-center border border-gray-100 hover:border-secondary/20">
+                    <div
+                        class="w-32 h-32 bg-transparent rounded-2xl flex items-center justify-center mx-auto mb-6 transform transition-transform duration-300 overflow-hidden relative">
+                        <img src="https://i.ibb.co/7JnSNgFW/Chat-GPT-Image-Jul-19-2025-07-11-23-AM-Photoroom.png" alt="قصص قرآن تفاعلية"
+                            class="w-24 h-24 object-cover rounded-xl group-hover:scale-[1.3] transition-all duration-500">
+                    </div>
+                    <h3 class="text-xl font-cairo font-semibold text-primary mb-3 group-hover:text-secondary transition-colors duration-300">
+                        قصص قرآن بأسلوب تفاعلي</h3>
+                    <p class="text-gray-600">قصص قرآنية ممتعة ومفيدة تشرح الآيات بأسلوب مبسط للأطفال</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials" class="py-28 relative overflow-hidden bg-gradient-to-br to-[#119f94]/10 via-white from-amber-50/80">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pb-12">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-cairo font-bold text-primary mb-4">ماذا يقول طلابنا؟</h2>
+                <p class="text-xl text-gray-600">شهادات حقيقية من طلاب وأولياء أمور</p>
+            </div>
+            <div class="relative testimonials-carousel">
+                <div class="overflow-hidden px-4 py-8">
+                    <div class="flex transition-transform duration-500 ease-in-out items-center" id="testimonials-track">
+                        <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div
+                                class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                                <div class="flex items-center justify-between mb-6">
+                                    <div class="flex items-center">
+                                        <img src="https://readdy.ai/api/search-image?query=professional%20muslim%20woman%20teacher%20wearing%20hijab%20smiling%20warmly%2C%20clean%20white%20background%2C%20portrait%20style%2C%20professional%20lighting%2C%20confident%20and%20friendly%20expression&width=80&height=80&seq=test001&orientation=squarish"
+                                            alt="أم محمد" class="w-16 h-16 rounded-full object-cover ml-4 ring-2 ring-secondary/20">
+                                        <div>
+                                            <h4 class="font-semibold text-primary text-lg">أم محمد العلي</h4>
+                                            <p class="text-sm text-gray-600">ولي أمر</p>
+                                        </div>
+                                    </div>
+                                    <div class="w-8 h-8 flex items-center justify-center">
+                                        <i class="ri-double-quotes-r text-2xl text-secondary/30"></i>
+                                    </div>
+                                </div>
+                                <div class="flex mb-4">
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                </div>
+                                <p class="text-gray-700 leading-relaxed">
+                                    "ابنتي تحفظ مع الأستاذة فاطمة منذ 6 أشهر وأرى تطوراً مذهلاً في حفظها وتلاوتها.
+                                    المعلمة صبورة ومتفانية والمتابعة ممتازة."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div
+                                class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                                <div class="flex items-center justify-between mb-6">
+                                    <div class="flex items-center">
+                                        <img src="https://readdy.ai/api/search-image?query=young%20muslim%20man%20student%20smiling%20confidently%2C%20clean%20white%20background%2C%20portrait%20style%2C%20professional%20lighting%2C%20wearing%20traditional%20islamic%20clothing&width=80&height=80&seq=test002&orientation=squarish"
+                                            alt="أحمد الشريف" class="w-16 h-16 rounded-full object-cover ml-4 ring-2 ring-secondary/20">
+                                        <div>
+                                            <h4 class="font-semibold text-primary text-lg">أحمد الشريف</h4>
+                                            <p class="text-sm text-gray-600">طالب</p>
+                                        </div>
+                                    </div>
+                                    <div class="w-8 h-8 flex items-center justify-center">
+                                        <i class="ri-double-quotes-r text-2xl text-secondary/30"></i>
+                                    </div>
+                                </div>
+                                <div class="flex mb-4">
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                </div>
+                                <p class="text-gray-700 leading-relaxed">
+                                    "أحفظ مع الأستاذ عبد الرحمن وهو معلم رائع. يشرح لي أحكام التجويد بطريقة سهلة
+                                    ويصحح أخطائي بصبر. أنصح الجميع بالمنصة."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div
+                                class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                                <div class="flex items-center justify-between mb-6">
+                                    <div class="flex items-center">
+                                        <img src="https://readdy.ai/api/search-image?query=middle%20aged%20muslim%20father%20smiling%20warmly%2C%20clean%20white%20background%2C%20portrait%20style%2C%20professional%20lighting%2C%20traditional%20islamic%20appearance&width=80&height=80&seq=test003&orientation=squarish"
+                                            alt="محمد الأحمد" class="w-16 h-16 rounded-full object-cover ml-4 ring-2 ring-secondary/20">
+                                        <div>
+                                            <h4 class="font-semibold text-primary text-lg">محمد الأحمد</h4>
+                                            <p class="text-sm text-gray-600">ولي أمر</p>
+                                        </div>
+                                    </div>
+                                    <div class="w-8 h-8 flex items-center justify-center">
+                                        <i class="ri-double-quotes-r text-2xl text-secondary/30"></i>
+                                    </div>
+                                </div>
+                                <div class="flex mb-4">
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                </div>
+                                <p class="text-gray-700 leading-relaxed">
+                                    "أولادي الثلاثة يحفظون في المنصة والحمد لله النتائج رائعة. المرونة في المواعيد
+                                    والتقارير الدورية تساعدني في متابعتهم."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div
+                                class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                                <div class="flex items-center justify-between mb-6">
+                                    <div class="flex items-center">
+                                        <img src="https://readdy.ai/api/search-image?query=professional%20muslim%20woman%20teacher%20wearing%20hijab%20smiling%20warmly%2C%20clean%20white%20background%2C%20portrait%20style%2C%20professional%20lighting%2C%20confident%20and%20friendly%20expression&width=80&height=80&seq=test001&orientation=squarish"
+                                            alt="أم محمد" class="w-16 h-16 rounded-full object-cover ml-4 ring-2 ring-secondary/20">
+                                        <div>
+                                            <h4 class="font-semibold text-primary text-lg">أم محمد العلي</h4>
+                                            <p class="text-sm text-gray-600">ولي أمر</p>
+                                        </div>
+                                    </div>
+                                    <div class="w-8 h-8 flex items-center justify-center">
+                                        <i class="ri-double-quotes-r text-2xl text-secondary/30"></i>
+                                    </div>
+                                </div>
+                                <div class="flex mb-4">
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                </div>
+                                <p class="text-gray-700 leading-relaxed">
+                                    "ابنتي تحفظ مع الأستاذة فاطمة منذ 6 أشهر وأرى تطوراً مذهلاً في حفظها وتلاوتها. المعلمة صبورة ومتفانية والمتابعة
+                                    ممتازة."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div
+                                class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                                <div class="flex items-center justify-between mb-6">
+                                    <div class="flex items-center">
+                                        <img src="https://readdy.ai/api/search-image?query=young%20muslim%20man%20student%20smiling%20confidently%2C%20clean%20white%20background%2C%20portrait%20style%2C%20professional%20lighting%2C%20wearing%20traditional%20islamic%20clothing&width=80&height=80&seq=test002&orientation=squarish"
+                                            alt="أحمد الشريف" class="w-16 h-16 rounded-full object-cover ml-4 ring-2 ring-secondary/20">
+                                        <div>
+                                            <h4 class="font-semibold text-primary text-lg">أحمد الشريف</h4>
+                                            <p class="text-sm text-gray-600">طالب</p>
+                                        </div>
+                                    </div>
+                                    <div class="w-8 h-8 flex items-center justify-center">
+                                        <i class="ri-double-quotes-r text-2xl text-secondary/30"></i>
+                                    </div>
+                                </div>
+                                <div class="flex mb-4">
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                </div>
+                                <p class="text-gray-700 leading-relaxed">
+                                    "أحفظ مع الأستاذ عبد الرحمن وهو معلم رائع. يشرح لي أحكام التجويد بطريقة سهلة ويصحح أخطائي بصبر. أنصح الجميع
+                                    بالمنصة."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div
+                                class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                                <div class="flex items-center justify-between mb-6">
+                                    <div class="flex items-center">
+                                        <img src="https://readdy.ai/api/search-image?query=middle%20aged%20muslim%20father%20smiling%20warmly%2C%20clean%20white%20background%2C%20portrait%20style%2C%20professional%20lighting%2C%20traditional%20islamic%20appearance&width=80&height=80&seq=test003&orientation=squarish"
+                                            alt="محمد الأحمد" class="w-16 h-16 rounded-full object-cover ml-4 ring-2 ring-secondary/20">
+                                        <div>
+                                            <h4 class="font-semibold text-primary text-lg">محمد الأحمد</h4>
+                                            <p class="text-sm text-gray-600">ولي أمر</p>
+                                        </div>
+                                    </div>
+                                    <div class="w-8 h-8 flex items-center justify-center">
+                                        <i class="ri-double-quotes-r text-2xl text-secondary/30"></i>
+                                    </div>
+                                </div>
+                                <div class="flex mb-4">
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                    <i class="ri-star-fill text-yellow-400"></i>
+                                </div>
+                                <p class="text-gray-700 leading-relaxed">
+                                    "أولادي الثلاثة يحفظون في المنصة والحمد لله النتائج رائعة. المرونة في المواعيد والتقارير الدورية تساعدني في
+                                    متابعتهم."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center mt-8 gap-4">
+                    <!-- Previous button -->
+                    <button id="carousel-prev"
+                        class="w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-300 hover:bg-gray-50 group flex items-center justify-center">
+                        <i class="ri-arrow-right-s-line text-xl text-gray-600 group-hover:text-primary transition-colors duration-300"></i>
+                    </button>
+
+                    <!-- Dots -->
+                    <div class="flex gap-2" id="carousel-dots">
+                        <button class="carousel-dot w-3 h-3 rounded-full bg-primary/20 transition-all duration-300" data-index="0"></button>
+                        <button class="carousel-dot w-3 h-3 rounded-full bg-primary/20 transition-all duration-300" data-index="1"></button>
+                    </div>
+
+                    <!-- Next button -->
+                    <button id="carousel-next"
+                        class="w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-300 hover:bg-gray-50 group flex items-center justify-center">
+                        <i class="ri-arrow-left-s-line text-xl text-gray-600 group-hover:text-primary transition-colors duration-300"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="packages" class="py-28 relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-[url('https://img.freepik.com/premium-vector/abstract-geometric-pattern-with-crosses-stripes-lines-seamless-vector-background-white-gold-ornament-modern-reticulated-graphic-design_976307-3445.jpg?w=2000')] bg-repeat bg-[size:360px] opacity-15">
+        </div>
+        <div class="absolute inset-0 bg-[#119f94] opacity-5"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-cairo font-bold text-primary mb-4">باقاتنا المميزة</h2>
+                <p class="text-xl text-gray-600">اختر الباقة التي تناسب احتياجاتك</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-cairo font-bold text-primary mb-2">باقة الأساس</h3>
+                        <div class="text-4xl font-bold text-secondary mb-4">
+                            ٦٩٩ ج.م
+                            <span class="text-lg text-gray-600 font-normal">/شهرياً</span>
+                        </div>
+                        <ul class="text-right space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 ml-2"></i>
+                                ٨ حصص شهرياً
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 ml-2"></i>
+                                مدة الحصة ٣٠ دقيقة
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 ml-2"></i>
+                                تحفيظ القرآن الكريم (حفظ ومراجعة)
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 ml-2"></i>
+                                دروس التجويد حسب المستوى
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 ml-2"></i>
+                                دروس الثقافة الإسلامية
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 ml-2"></i>
+                                تأسيس قواعد القراءة والكتابة
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 ml-2"></i>
+                                محتوى تفاعلي عبر المنصة
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 ml-2"></i>
+                                متابعة فردية خاصة
+                            </li>
+                        </ul>
+                        <button
+                            class="subscriptionButton basicPackage w-full bg-primary text-white py-3 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                            اشترك الآن
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-secondary relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-secondary text-white px-4 py-1 rounded-full text-sm font-semibold">الأكثر
+                            شعبية</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-2xl font-cairo font-bold text-primary mb-2">باقة التميز</h3>
+                        <div class="text-4xl font-bold text-secondary mb-4">
+                            ٨٠٠ ج.م
+                            <span class="text-lg text-gray-600 font-normal">/شهرياً</span>
+                        </div>
+                        <ul class="text-right space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 ml-2"></i>
+                                ٨ حصص شهرياً
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 ml-2"></i>
+                                مدة الحصة ٣٠ دقيقة
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 ml-2"></i>
+                                جميع مميزات باقة الأساس
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 ml-2"></i>
+                                دعم إضافي في مهارات التدبر والتفكير
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 ml-2"></i>
+                                التركيز على مهارات السلوك القيمي
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 ml-2"></i>
+                                اختبار دوري وتقرير شهري
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 ml-2"></i>
+                                مرونة أكبر في جدولة الحصص
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 ml-2"></i>
+                                إمكانية التواصل مع معلم خاص
+                            </li>
+                        </ul>
+                        <button
+                            class="subscriptionButton advancedPackage w-full bg-secondary text-white py-3 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                            اشترك الآن
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-primary/5 to-secondary/5 p-8 rounded-xl">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-cairo font-bold text-primary mb-6">مميزات عامة</h3>
+                        <ul class="text-right space-y-4">
+                            <li class="flex items-center">
+                                <i class="ri-shield-star-line text-secondary ml-3 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold text-primary">معلمون مؤهلون</h4>
+                                    <p class="text-gray-600 text-sm">حاصلون على إجازات في القرآن والتجويد</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-device-line text-secondary ml-3 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold text-primary">منصة تعليمية متطورة</h4>
+                                    <p class="text-gray-600 text-sm">سهلة الاستخدام وآمنة للأطفال</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-calendar-check-line text-secondary ml-3 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold text-primary">مرونة في المواعيد</h4>
+                                    <p class="text-gray-600 text-sm">اختر الوقت المناسب لجدولك</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-group-line text-secondary ml-3 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold text-primary">دعم مستمر</h4>
+                                    <p class="text-gray-600 text-sm">فريق متخصص لمساعدتك على مدار الساعة</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-award-line text-secondary ml-3 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold text-primary">شهادات معتمدة</h4>
+                                    <p class="text-gray-600 text-sm">عند إتمام كل مستوى من الحفظ</p>
+                                </div>
                             </li>
                         </ul>
                     </div>
-                    <div>
-                        <h4 class="text-lg font-semibold mb-4">تواصل معنا</h4>
-                        <div class="space-y-3">
-                            <div class="flex items-center">
-                                <div class="w-6 h-6 flex items-center justify-center ml-3">
-                                    <i class="ri-whatsapp-line text-green-400"></i>
-                                </div>
-                                <span class="text-gray-300">+966 50 123 4567</span>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="w-6 h-6 flex items-center justify-center ml-3">
-                                    <i class="ri-telegram-line text-blue-400"></i>
-                                </div>
-                                <span class="text-gray-300">@quranplaza</span>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="w-6 h-6 flex items-center justify-center ml-3">
-                                    <i class="ri-mail-line text-red-400"></i>
-                                </div>
-                                <span class="text-gray-300">info@quranplaza.com</span>
-                            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-8">
+                        <img src="https://i.ibb.co/x8PSg2x9/6b249e5c-4f1f-4f60-8713-950172188849-Photoroom.png" alt="قرآن بلازا"
+                            class="w-40 h-56 object-contain flex-shrink-0">
+                        <div>
+                            <div class="text-2xl font-cairo font-bold mb-4">قرآن بلازا</div>
+                            <p class="text-gray-300">
+                                منصة متخصصة في تعليم وتحفيظ القرآن الكريم للصغار والكبار بأحدث الطرق التعليمية
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="border-t border-gray-600 mt-8 pt-8 text-center">
-                    <p class="text-gray-300">© 2025 قرآن بلازا. جميع الحقوق محفوظة.</p>
+                <div class="md:col-span-1">
+                    <h4 class="text-lg font-semibold mb-4">تابعنا على وسائل التواصل</h4>
+                    <div class="space-y-3">
+                        <a href="https://facebook.com/share/1EnZysxnKb" target="_blank" rel="noopener"
+                            class="flex items-center hover:text-white transition-colors">
+                            <div class="w-6 h-6 flex items-center justify-center ml-3">
+                                <i class="ri-facebook-circle-fill text-blue-500"></i>
+                            </div>
+                            <span class="text-gray-300">فيسبوك</span>
+                        </a>
+                        <a href="https://instagram.com/quranplaza" target="_blank" rel="noopener"
+                            class="flex items-center hover:text-white transition-colors">
+                            <div class="w-6 h-6 flex items-center justify-center ml-3">
+                                <i class="ri-instagram-fill text-pink-500"></i>
+                            </div>
+                            <span class="text-gray-300">إنستجرام</span>
+                        </a>
+                        <a href="https://tiktok.com/@quranplaza7" target="_blank" rel="noopener"
+                            class="flex items-center hover:text-white transition-colors">
+                            <div class="w-6 h-6 flex items-center justify-center ml-3">
+                                <i class="ri-tiktok-fill text-black"></i>
+                            </div>
+                            <span class="text-gray-300">تيك توك</span>
+                        </a>
+                        <a href="https://x.com/Quran_plaza" target="_blank" rel="noopener"
+                            class="flex items-center hover:text-white transition-colors">
+                            <div class="w-6 h-6 flex items-center justify-center ml-3">
+                                <i class="ri-twitter-x-fill text-gray-400"></i>
+                            </div>
+                            <span class="text-gray-300">تويتر (X)</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </footer>
-        <div class="fixed bottom-6 left-6 z-50">
-            <a href="https://wa.me/201080706069" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب"
-                title="تواصل عبر واتساب"
-                class="bg-green-500 text-white w-16 h-16 rounded-full shadow-lg hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-300 transition-colors flex items-center justify-center"
-                style="box-sizing:content-box;">
-                <i class="ri-whatsapp-fill text-3xl" aria-hidden="true"></i>
-            </a>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2025 قرآن بلازا. جميع الحقوق محفوظة.</p>
+            </div>
         </div>
-        <script id="smooth-scroll">
-            document.addEventListener("DOMContentLoaded", function () {
-                // Handle package subscription buttons
-                const subscriptionButtons = document.querySelectorAll('.subscriptionButton');
-                const packageSelect = document.getElementById('package');
-                
-                subscriptionButtons.forEach(button => {
-                    button.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        
-                        // Set the selected package in the contact form
-                        if (this.classList.contains('basicPackage')) {
-                            packageSelect.value = 'basic';
-                        } else if (this.classList.contains('advancedPackage')) {
-                            packageSelect.value = 'advanced';
-                        }
-                        
-                        // Scroll to contact form
-                        const contactSection = document.getElementById('contact');
-                        contactSection.scrollIntoView({
+    </footer>
+    <div class="fixed bottom-6 left-6 z-50">
+        <a href="https://wa.me/201080706069" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب" title="تواصل عبر واتساب"
+            class="bg-green-500 text-white w-16 h-16 rounded-full shadow-lg hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-300 transition-colors flex items-center justify-center"
+            style="box-sizing:content-box;">
+            <i class="ri-whatsapp-fill text-3xl" aria-hidden="true"></i>
+        </a>
+    </div>
+    <script id="smooth-scroll">
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            // Smooth scroll for regular links
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+                    }
+                });
+            });
+
+            // Logo click to scroll to top
+            const logoContainer = document.getElementById('logo-container');
+            if (logoContainer) {
+                logoContainer.addEventListener('click', function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Hero CTA button scroll to packages
+            const heroCtaBtn = document.getElementById('hero-cta-btn');
+            if (heroCtaBtn) {
+                heroCtaBtn.addEventListener('click', function () {
+                    const packagesSection = document.getElementById('packages');
+                    if (packagesSection) {
+                        packagesSection.scrollIntoView({
                             behavior: 'smooth',
                             block: 'start'
                         });
+                    }
+                });
+            }
+
+            // Package subscription popup functionality
+            const subscriptionButtons = document.querySelectorAll('.subscriptionButton');
+
+            subscriptionButtons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Get package info
+                    let packageInfo = '';
+                    let packageName = '';
+                    if (this.classList.contains('basicPackage')) {
+                        packageInfo = 'باقة الأساس - ٦٩٩ ج.م شهرياً';
+                        packageName = 'باقة الأساس';
+                    } else if (this.classList.contains('advancedPackage')) {
+                        packageInfo = 'باقة التميز - ٨٠٠ ج.م شهرياً';
+                        packageName = 'باقة التميز';
+                    }
+
+                    // Show popup
+                    showSubscriptionPopup(packageInfo, packageName);
+                });
+            });
+
+            function showSubscriptionPopup(packageInfo, packageName) {
+                // Create popup HTML
+                const popupHTML = `
+                    <div id="subscription-popup" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+                        <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300">
+                            <!-- Header -->
+                            <div class="bg-gradient-to-r from-primary to-secondary text-white p-6 rounded-t-2xl">
+                                <div class="flex justify-between items-center">
+                                    <h2 class="text-2xl font-cairo font-bold">تسجيل جديد</h2>
+                                    <button id="close-popup" class="text-white hover:text-gray-200 transition-colors">
+                                        <i class="ri-close-line text-2xl"></i>
+                                    </button>
+                                </div>
+                                <div class="mt-4 p-4 bg-white/20 rounded-lg">
+                                    <p class="text-sm opacity-90">الباقة المختارة:</p>
+                                    <p class="font-semibold text-lg">${packageInfo}</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Form -->
+                            <form id="subscription-form" class="p-8 space-y-8">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <!-- اسم الطالب -->
+                                    <div>
+                                        <label class="block text-right text-gray-700 mb-2 font-semibold">اسم الطالب *</label>
+                                        <input type="text" name="studentName" required
+                                            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right"
+                                            placeholder="أدخل اسم الطالب">
+                                    </div>
+                                    
+                                    <!-- العمر -->
+                                    <div>
+                                        <label class="block text-right text-gray-700 mb-2 font-semibold">العمر *</label>
+                                        <input type="number" name="age" required min="3" max="99"
+                                            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right"
+                                            placeholder="أدخل العمر">
+                                    </div>
+                                    
+                                    <!-- المرحلة الدراسية -->
+                                    <div>
+                                        <label class="block text-right text-gray-700 mb-2 font-semibold">المرحلة الدراسية</label>
+                                        <select name="educationLevel"
+                                            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right">
+                                            <option value="">اختر المرحلة الدراسية</option>
+                                            <option value="ما قبل المدرسة (3-5 سنوات)">ما قبل المدرسة (3-5 سنوات)</option>
+                                            <option value="الابتدائي (6-12 سنة)">الابتدائي (6-12 سنة)</option>
+                                            <option value="المتوسط (13-15 سنة)">المتوسط (13-15 سنة)</option>
+                                            <option value="الثانوي (16-18 سنة)">الثانوي (16-18 سنة)</option>
+                                            <option value="الجامعي (19+ سنة)">الجامعي (19+ سنة)</option>
+                                            <option value="خريج جامعي">خريج جامعي</option>
+                                            <option value="أخرى">أخرى</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <!-- رقم هاتف ولي الأمر -->
+                                    <div>
+                                        <label class="block text-right text-gray-700 mb-2 font-semibold">رقم هاتف ولي الأمر *</label>
+                                        <input type="tel" name="parentPhone" required
+                                            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right"
+                                            placeholder="أدخل رقم الهاتف">
+                                    </div>
+                                    
+                                    <!-- المستوى الحالي في القرآن الكريم -->
+                                    <div>
+                                        <label class="block text-right text-gray-700 mb-2 font-semibold">المستوى الحالي في القرآن الكريم *</label>
+                                        <select name="quranLevel" required
+                                            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right">
+                                            <option value="">اختر المستوى</option>
+                                            <option value="مبتدئ - لا يقرأ العربية">مبتدئ - لا يقرأ العربية</option>
+                                            <option value="مبتدئ - يقرأ العربية ببطء">مبتدئ - يقرأ العربية ببطء</option>
+                                            <option value="متوسط - يقرأ القرآن بطلاقة">متوسط - يقرأ القرآن بطلاقة</option>
+                                            <option value="متقدم - يحفظ بعض الأجزاء">متقدم - يحفظ بعض الأجزاء</option>
+                                            <option value="حافظ - أقل من 10 أجزاء">حافظ - أقل من 10 أجزاء</option>
+                                            <option value="حافظ - أكثر من 10 أجزاء">حافظ - أكثر من 10 أجزاء</option>
+                                            <option value="حافظ للقرآن كاملاً">حافظ للقرآن كاملاً</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <!-- نوع البرنامج المطلوب -->
+                                    <div>
+                                        <label class="block text-right text-gray-700 mb-2 font-semibold">نوع البرنامج المطلوب *</label>
+                                        <select name="programType" required
+                                            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right">
+                                            <option value="">اختر نوع البرنامج</option>
+                                            <option value="حفظ جديد">حفظ جديد</option>
+                                            <option value="مراجعة المحفوظ">مراجعة المحفوظ</option>
+                                            <option value="مسار الإجازة">مسار الإجازة</option>
+                                            <option value="تعليم التجويد فقط">تعليم التجويد فقط</option>
+                                            <option value="تحسين التلاوة">تحسين التلاوة</option>
+                                            <option value="تأسيس (تعلم القراءة)">تأسيس (تعلم القراءة)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <!-- الأيام المفضلة -->
+                                <div>
+                                    <label class="block text-right text-gray-700 mb-3 font-semibold">الأيام المفضلة *</label>
+                                    <div class="grid grid-cols-7 gap-2">
+                                        <label class="flex flex-col items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredDays" value="الأحد" class="sr-only">
+                                            <span class="text-sm font-semibold text-gray-700">الأحد</span>
+                                        </label>
+                                        <label class="flex flex-col items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredDays" value="الاثنين" class="sr-only">
+                                            <span class="text-sm font-semibold text-gray-700">الاثنين</span>
+                                        </label>
+                                        <label class="flex flex-col items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredDays" value="الثلاثاء" class="sr-only">
+                                            <span class="text-sm font-semibold text-gray-700">الثلاثاء</span>
+                                        </label>
+                                        <label class="flex flex-col items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredDays" value="الأربعاء" class="sr-only">
+                                            <span class="text-sm font-semibold text-gray-700">الأربعاء</span>
+                                        </label>
+                                        <label class="flex flex-col items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredDays" value="الخميس" class="sr-only">
+                                            <span class="text-sm font-semibold text-gray-700">الخميس</span>
+                                        </label>
+                                        <label class="flex flex-col items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredDays" value="الجمعة" class="sr-only">
+                                            <span class="text-sm font-semibold text-gray-700">الجمعة</span>
+                                        </label>
+                                        <label class="flex flex-col items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredDays" value="السبت" class="sr-only">
+                                            <span class="text-sm font-semibold text-gray-700">السبت</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <!-- الأوقات المفضلة -->
+                                <div>
+                                    <label class="block text-right text-gray-700 mb-3 font-semibold">الأوقات المفضلة *</label>
+                                    <div class="grid grid-cols-3 gap-3">
+                                        <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredTimes" value="الفجر (5:00 - 7:00)" class="w-4 h-4 rounded-full border-2 border-gray-300 text-[#119f94] focus:ring-[#119f94] focus:ring-2 focus:ring-offset-0">
+                                            <span class="text-sm font-semibold text-gray-700 mr-3">الفجر (5:00 - 7:00)</span>
+                                        </label>
+                                        <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredTimes" value="الصباح (8:00 - 12:00)" class="w-4 h-4 rounded-full border-2 border-gray-300 text-[#119f94] focus:ring-[#119f94] focus:ring-2 focus:ring-offset-0">
+                                            <span class="text-sm font-semibold text-gray-700 mr-3">الصباح (8:00 - 12:00)</span>
+                                        </label>
+                                        <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredTimes" value="الظهر (12:00 - 3:00)" class="w-4 h-4 rounded-full border-2 border-gray-300 text-[#119f94] focus:ring-[#119f94] focus:ring-2 focus:ring-offset-0">
+                                            <span class="text-sm font-semibold text-gray-700 mr-3">الظهر (12:00 - 3:00)</span>
+                                        </label>
+                                        <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredTimes" value="العصر (3:00 - 6:00)" class="w-4 h-4 rounded-full border-2 border-gray-300 text-[#119f94] focus:ring-[#119f94] focus:ring-2 focus:ring-offset-0">
+                                            <span class="text-sm font-semibold text-gray-700 mr-3">العصر (3:00 - 6:00)</span>
+                                        </label>
+                                        <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredTimes" value="المغرب (6:00 - 8:00)" class="w-4 h-4 rounded-full border-2 border-gray-300 text-[#119f94] focus:ring-[#119f94] focus:ring-2 focus:ring-offset-0">
+                                            <span class="text-sm font-semibold text-gray-700 mr-3">المغرب (6:00 - 8:00)</span>
+                                        </label>
+                                        <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredTimes" value="العشاء (8:00 - 11:00)" class="w-4 h-4 rounded-full border-2 border-gray-300 text-[#119f94] focus:ring-[#119f94] focus:ring-2 focus:ring-offset-0">
+                                            <span class="text-sm font-semibold text-gray-700 mr-3">العشاء (8:00 - 11:00)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <!-- ملاحظات إضافية -->
+                                <div>
+                                    <label class="block text-right text-gray-700 mb-2 font-semibold">ملاحظات إضافية</label>
+                                    <textarea name="notes" rows="4"
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right resize-none"
+                                        placeholder="أضف أي ملاحظات إضافية هنا..."></textarea>
+                                </div>
+                                
+                                <!-- Submit Button -->
+                                <button type="submit"
+                                    class="w-full bg-secondary text-white py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all transform hover:scale-105 relative overflow-hidden">
+                                    <span class="relative z-10">إرسال الطلب</span>
+                                    <div class="absolute inset-0 bg-white opacity-20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                `;
+
+                // Add popup to body
+                document.body.insertAdjacentHTML('beforeend', popupHTML);
+
+                // Get popup elements
+                const popup = document.getElementById('subscription-popup');
+                const closeBtn = document.getElementById('close-popup');
+                const form = document.getElementById('subscription-form');
+
+                // Show popup with animation
+                setTimeout(() => {
+                    popup.classList.remove('opacity-0');
+                    popup.querySelector('.bg-white').classList.remove('scale-95');
+                    popup.querySelector('.bg-white').classList.add('scale-100');
+                }, 10);
+
+                // Close popup
+                closeBtn.addEventListener('click', () => {
+                    popup.classList.add('opacity-0');
+                    popup.querySelector('.bg-white').classList.remove('scale-100');
+                    popup.querySelector('.bg-white').classList.add('scale-95');
+                    setTimeout(() => {
+                        popup.remove();
+                    }, 300);
+                });
+
+                // Close on backdrop click
+                popup.addEventListener('click', (e) => {
+                    if (e.target === popup) {
+                        closeBtn.click();
+                    }
+                });
+
+                // Handle form submission
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    // Collect form data
+                    const formData = new FormData(form);
+                    const data = {
+                        package: packageName,
+                        studentName: formData.get('studentName'),
+                        age: formData.get('age'),
+                        educationLevel: formData.get('educationLevel'),
+                        parentPhone: formData.get('parentPhone'),
+                        quranLevel: formData.get('quranLevel'),
+                        programType: formData.get('programType'),
+                        preferredDays: formData.getAll('preferredDays'),
+                        preferredTimes: formData.getAll('preferredTimes'),
+                        notes: formData.get('notes')
+                    };
+
+                    // Format message
+                    const message = formatWhatsAppMessage(data);
+
+                    // Send to WhatsApp
+                    const whatsappUrl = `https://wa.me/201080706069?text=${encodeURIComponent(message)}`;
+                    window.open(whatsappUrl, '_blank');
+
+                    // Close popup
+                    closeBtn.click();
+                });
+
+                // Handle checkbox styling
+                const checkboxes = popup.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    checkbox.addEventListener('change', function () {
+                        const label = this.closest('label');
+                        if (this.checked) {
+                            label.classList.add('border-[#119f94]', 'bg-[#119f94]/5');
+                        } else {
+                            label.classList.remove('border-[#119f94]', 'bg-[#119f94]/5');
+                        }
+                    });
+                });
+            }
+
+            function formatWhatsAppMessage(data) {
+                return `🎯 *طلب تسجيل جديد - قرآن بلازا*
+
+📦 *الباقة المختارة:* ${data.package}
+
+👤 *معلومات الطالب:*
+• الاسم: ${data.studentName}
+• العمر: ${data.age} سنة
+• المرحلة الدراسية: ${data.educationLevel || 'غير محدد'}
+
+📞 *معلومات التواصل:*
+• رقم هاتف ولي الأمر: ${data.parentPhone}
+
+📚 *المستوى الحالي:*
+• المستوى في القرآن الكريم: ${data.quranLevel}
+• نوع البرنامج المطلوب: ${data.programType}
+
+📅 *الأيام المفضلة:*
+${data.preferredDays.length > 0 ? data.preferredDays.join('، ') : 'غير محدد'}
+
+⏰ *الأوقات المفضلة:*
+${data.preferredTimes.length > 0 ? data.preferredTimes.join('، ') : 'غير محدد'}
+
+📝 *ملاحظات إضافية:*
+${data.notes || 'لا توجد ملاحظات'}
+
+---
+*تم إرسال هذا الطلب من موقع قرآن بلازا*`;
+            }
+        });
+    </script>
+    <script id="counter-animation">
+        document.addEventListener("DOMContentLoaded", function () {
+            const counters = document.querySelectorAll(".counter");
+            const speed = 200;
+            const startCounting = (counter) => {
+                const target = +counter.getAttribute("data-target");
+                const count = +counter.innerText;
+                const increment = target / speed;
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(() => startCounting(counter), 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            const observerCallback = (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        startCounting(entry.target);
+                    }
+                });
+            };
+            const observer = new IntersectionObserver(observerCallback, {
+                threshold: 0.5,
+            });
+            counters.forEach((counter) => observer.observe(counter));
+        });
+    </script>
+    <script id="testimonials-carousel">
+        document.addEventListener("DOMContentLoaded", function () {
+            if (document.querySelector(".testimonials-carousel")) {
+                const carousel = document.querySelector("#testimonials-track");
+                const dots = document.querySelectorAll(".carousel-dot");
+                const prevBtn = document.querySelector("#carousel-prev");
+                const nextBtn = document.querySelector("#carousel-next");
+                let currentIndex = 0;
+                let isAnimating = false;
+                const totalItems = carousel.children.length;
+
+                // Determine items per view based on screen size
+                function getItemsPerView() {
+                    const viewportWidth = window.innerWidth;
+                    if (viewportWidth >= 1024) {
+                        return 3; // Large screens: 3 items
+                    } else if (viewportWidth >= 640) {
+                        return 2; // Medium screens: 2 items
+                    } else {
+                        return 1; // Small screens: 1 item
+                    }
+                }
+
+                let itemsPerView = getItemsPerView();
+
+                // Update carousel position and dots
+                function updateCarousel() {
+                    if (isAnimating) return;
+                    isAnimating = true;
+
+                    // Calculate item width based on responsive classes
+                    const itemsPerView = getItemsPerView();
+                    const itemWidth = 100 / itemsPerView; // Percentage width per item
+                    const translateX = currentIndex * itemWidth * 3; // Scroll 3 items at a time
+
+                    carousel.style.transition = "transform 0.3s ease-in-out";
+                    carousel.style.transform = `translateX(${translateX}%)`;
+
+                    // Update dots - show active dot based on current position
+                    dots.forEach((dot, index) => {
+                        if (index === currentIndex) {
+                            dot.classList.add("bg-primary");
+                            dot.classList.remove("bg-primary/20");
+                        } else {
+                            dot.classList.remove("bg-primary");
+                            dot.classList.add("bg-primary/20");
+                        }
+                    });
+
+                    setTimeout(() => {
+                        isAnimating = false;
+                    }, 300);
+                }
+
+                // Handle next button - infinite scroll
+                function handleNext() {
+                    if (isAnimating) return;
+                    currentIndex = (currentIndex + 1) % Math.ceil(totalItems / 3);
+                    updateCarousel();
+                }
+
+                function handlePrev() {
+                    if (isAnimating) return;
+                    currentIndex = (currentIndex - 1 + Math.ceil(totalItems / 3)) % Math.ceil(totalItems / 3);
+                    updateCarousel();
+                }
+
+                // Add event listeners for navigation buttons (reversed for RTL)
+                nextBtn.addEventListener("click", handlePrev); // Left arrow goes to previous in RTL
+                prevBtn.addEventListener("click", handleNext); // Right arrow goes to next in RTL
+
+                // Dot navigation
+                dots.forEach((dot, index) => {
+                    dot.addEventListener("click", () => {
+                        if (isAnimating) return;
+                        currentIndex = index;
+                        updateCarousel();
                     });
                 });
 
-                // Smooth scroll for regular links
-                const links = document.querySelectorAll('a[href^="#"]');
-                links.forEach((link) => {
-                    link.addEventListener("click", function (e) {
-                        e.preventDefault();
-                        const targetId = this.getAttribute("href").substring(1);
-                        const targetElement = document.getElementById(targetId);
-                        if (targetElement) {
-                            targetElement.scrollIntoView({
-                                behavior: "smooth",
-                                block: "start"
-                            });
-                        }
-                    });
-                });
-            });
-        </script>
-        <script id="counter-animation">
-            document.addEventListener("DOMContentLoaded", function () {
-                const counters = document.querySelectorAll(".counter");
-                const speed = 200;
-                const startCounting = (counter) => {
-                    const target = +counter.getAttribute("data-target");
-                    const count = +counter.innerText;
-                    const increment = target / speed;
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + increment);
-                        setTimeout(() => startCounting(counter), 1);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-                const observerCallback = (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            startCounting(entry.target);
-                        }
-                    });
-                };
-                const observer = new IntersectionObserver(observerCallback, {
-                    threshold: 0.5,
-                });
-                counters.forEach((counter) => observer.observe(counter));
-            });
-        </script>
-        <script id="testimonials-carousel">
-            document.addEventListener("DOMContentLoaded", function () {
-                if (document.querySelector(".testimonials-carousel")) {
-                    const carousel = document.querySelector("#testimonials-track");
-                    const dots = document.querySelectorAll(".carousel-dot");
-                    const prevBtn = document.querySelector("#carousel-prev");
-                    const nextBtn = document.querySelector("#carousel-next");
-                    let currentIndex = 0;
-                    let isAnimating = false;
-                    const totalItems = carousel.children.length;
-                    
-                    // Determine items per view based on screen size
-                    function getItemsPerView() {
-                        const viewportWidth = window.innerWidth;
-                        if (viewportWidth >= 1024) {
-                            return 3; // Large screens: 3 items
-                        } else if (viewportWidth >= 640) {
-                            return 2; // Medium screens: 2 items
-                        } else {
-                            return 1; // Small screens: 1 item
-                        }
-                    }
-                    
-                    let itemsPerView = getItemsPerView();
-                    
-                    // Update carousel position and dots
-                    function updateCarousel() {
-                        if (isAnimating) return;
-                        isAnimating = true;
-                        
-                        // Calculate item width based on responsive classes
-                        const itemsPerView = getItemsPerView();
-                        const itemWidth = 100 / itemsPerView; // Percentage width per item
-                        const translateX = currentIndex * itemWidth * 3; // Scroll 3 items at a time
-                        
-                        carousel.style.transition = "transform 0.3s ease-in-out";
-                        carousel.style.transform = `translateX(${translateX}%)`;
-                        
-                        // Update dots - show active dot based on current position
-                        dots.forEach((dot, index) => {
-                            if (index === currentIndex) {
-                                dot.classList.add("bg-primary");
-                                dot.classList.remove("bg-primary/20");
-                            } else {
-                                dot.classList.remove("bg-primary");
-                                dot.classList.add("bg-primary/20");
-                            }
-                        });
-                        
-                        setTimeout(() => {
-                            isAnimating = false;
-                        }, 300);
-                    }
-                    
-                    // Handle next button - infinite scroll
-                    function handleNext() {
-                        if (isAnimating) return;
-                        currentIndex = (currentIndex + 1) % Math.ceil(totalItems / 3);
-                        updateCarousel();
-                    }
-                    
-                    function handlePrev() {
-                        if (isAnimating) return;
-                        currentIndex = (currentIndex - 1 + Math.ceil(totalItems / 3)) % Math.ceil(totalItems / 3);
-                        updateCarousel();
-                    }
-                    
-                    // Add event listeners for navigation buttons (reversed for RTL)
-                    nextBtn.addEventListener("click", handlePrev); // Left arrow goes to previous in RTL
-                    prevBtn.addEventListener("click", handleNext); // Right arrow goes to next in RTL
-                    
-                    // Dot navigation
-                    dots.forEach((dot, index) => {
-                        dot.addEventListener("click", () => {
-                            if (isAnimating) return;
-                            currentIndex = index;
-                            updateCarousel();
-                        });
-                    });
-                    
-                    // Update dot count based on three-item groups
-                    const dotContainer = document.getElementById('carousel-dots');
-                    const groupCount = Math.ceil(totalItems / 3);
-                    const currentDots = dotContainer.querySelectorAll('.carousel-dot');
-                    
-                    // Remove extra dots
-                    for (let i = currentDots.length - 1; i >= groupCount; i--) {
-                        currentDots[i].remove();
-                    }
-                    
-                    // Add missing dots
-                    for (let i = currentDots.length; i < groupCount; i++) {
-                        const dot = document.createElement('button');
-                        dot.className = 'carousel-dot w-3 h-3 rounded-full bg-primary/20 transition-all duration-300';
-                        dot.setAttribute('data-index', i);
-                        dotContainer.appendChild(dot);
-                    }
-                    
-                    // Autoplay functionality
-                    let autoplayInterval = null;
-                    function startAutoplay() {
-                        if (autoplayInterval) clearInterval(autoplayInterval);
-                        autoplayInterval = setInterval(handleNext, 5000);
-                    }
-                    
-                    function stopAutoplay() {
-                        if (autoplayInterval) {
-                            clearInterval(autoplayInterval);
-                            autoplayInterval = null;
-                        }
-                    }
-                    
-                    // Pause autoplay on hover
-                    const carouselContainer = document.querySelector(".testimonials-carousel");
-                    carouselContainer.addEventListener("mouseenter", stopAutoplay);
-                    carouselContainer.addEventListener("mouseleave", startAutoplay);
-                    
-                    // Handle window resize
-                    window.addEventListener('resize', () => {
-                        const newItemsPerView = getItemsPerView();
-                        if (newItemsPerView !== itemsPerView) {
-                            itemsPerView = newItemsPerView;
-                            // Adjust current index if needed
-                            if (currentIndex >= totalItems) {
-                                currentIndex = 0;
-                            }
-                            updateCarousel();
-                        }
-                    });
-                    
-                    // Initialize
-                    updateCarousel();
-                    startAutoplay();
+                // Update dot count based on three-item groups
+                const dotContainer = document.getElementById('carousel-dots');
+                const groupCount = Math.ceil(totalItems / 3);
+                const currentDots = dotContainer.querySelectorAll('.carousel-dot');
+
+                // Remove extra dots
+                for (let i = currentDots.length - 1; i >= groupCount; i--) {
+                    currentDots[i].remove();
                 }
-            });
-        </script>
-        <script id="navbar-scroll">
-            document.addEventListener("DOMContentLoaded", function () {
-                const navbar = document.querySelector("nav");
-                const navbarContent = navbar.querySelector(".flex");
-                function updateNavbar() {
-                    if (window.scrollY > 100) {
-                        navbar.classList.add("shadow-md", "bg-white/80", "backdrop-blur-lg");
-                        navbar.classList.remove("bg-white");
-                        navbarContent.style.height = "64px";
-                        navbar.querySelectorAll("a").forEach((link) => {
-                            link.style.fontSize = "0.875rem";
-                        });
-                        navbar.querySelector(".font-cairo").style.fontSize = "1.5rem";
-                    } else {
-                        navbar.classList.remove("shadow-md", "bg-white/80", "backdrop-blur-lg");
-                        navbar.classList.add("bg-white");
-                        navbarContent.style.height = "80px";
-                        navbar.querySelectorAll("a").forEach((link) => {
-                            link.style.fontSize = "1.125rem";
-                        });
-                        navbar.querySelector(".font-cairo").style.fontSize = "1.875rem";
+
+                // Add missing dots
+                for (let i = currentDots.length; i < groupCount; i++) {
+                    const dot = document.createElement('button');
+                    dot.className = 'carousel-dot w-3 h-3 rounded-full bg-primary/20 transition-all duration-300';
+                    dot.setAttribute('data-index', i);
+                    dotContainer.appendChild(dot);
+                }
+
+                // Autoplay functionality
+                let autoplayInterval = null;
+                function startAutoplay() {
+                    if (autoplayInterval) clearInterval(autoplayInterval);
+                    autoplayInterval = setInterval(handleNext, 5000);
+                }
+
+                function stopAutoplay() {
+                    if (autoplayInterval) {
+                        clearInterval(autoplayInterval);
+                        autoplayInterval = null;
                     }
                 }
-                window.addEventListener("scroll", () => {
-                    requestAnimationFrame(updateNavbar);
+
+                // Pause autoplay on hover
+                const carouselContainer = document.querySelector(".testimonials-carousel");
+                carouselContainer.addEventListener("mouseenter", stopAutoplay);
+                carouselContainer.addEventListener("mouseleave", startAutoplay);
+
+                // Handle window resize
+                window.addEventListener('resize', () => {
+                    const newItemsPerView = getItemsPerView();
+                    if (newItemsPerView !== itemsPerView) {
+                        itemsPerView = newItemsPerView;
+                        // Adjust current index if needed
+                        if (currentIndex >= totalItems) {
+                            currentIndex = 0;
+                        }
+                        updateCarousel();
+                    }
                 });
-                updateNavbar();
+
+                // Initialize
+                updateCarousel();
+                startAutoplay();
+            }
+        });
+    </script>
+    <script id="navbar-scroll">
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbar = document.querySelector("nav");
+            const navbarContent = navbar.querySelector(".flex");
+            function updateNavbar() {
+                if (window.scrollY > 100) {
+                    navbar.classList.add("shadow-md", "bg-white/80", "backdrop-blur-lg");
+                    navbar.classList.remove("bg-white");
+                    navbarContent.style.height = "64px";
+                    navbar.querySelectorAll("a").forEach((link) => {
+                        link.style.fontSize = "0.875rem";
+                    });
+                    navbar.querySelector(".font-cairo").style.fontSize = "1.5rem";
+                } else {
+                    navbar.classList.remove("shadow-md", "bg-white/80", "backdrop-blur-lg");
+                    navbar.classList.add("bg-white");
+                    navbarContent.style.height = "80px";
+                    navbar.querySelectorAll("a").forEach((link) => {
+                        link.style.fontSize = "1.125rem";
+                    });
+                    navbar.querySelector(".font-cairo").style.fontSize = "1.875rem";
+                }
+            }
+            window.addEventListener("scroll", () => {
+                requestAnimationFrame(updateNavbar);
             });
-        </script>
-        <script id="cta-buttons">
-document.addEventListener("DOMContentLoaded", function () {
-    function scrollToContact() {
-        const contactSection = document.getElementById("contact");
-        if (contactSection) {
-            contactSection.scrollIntoView({ behavior: "smooth" });
-        }
-    }
-    // Navbar CTA button
-    const navbarCtaBtn = document.getElementById("navbar-cta-btn");
-    if (navbarCtaBtn) {
-        navbarCtaBtn.addEventListener("click", function(e) {
-            e.preventDefault();
-            scrollToContact();
+            updateNavbar();
         });
-    }
-    // Hero CTA button
-    const heroCtaBtn = document.getElementById("hero-cta-btn");
-    if (heroCtaBtn) {
-        heroCtaBtn.addEventListener("click", function(e) {
-            e.preventDefault();
-            scrollToContact();
-        });
-    }
-    
-    // Mobile sidebar functionality
-    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-    const mobileSidebar = document.getElementById("mobile-sidebar");
-    const sidebarPanel = document.getElementById("sidebar-panel");
-    const closeSidebarBtn = document.getElementById("close-sidebar-btn");
-    const sidebarBackdrop = document.getElementById("sidebar-backdrop");
-    const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
-    const mobileCtaBtn = document.getElementById("mobile-cta-btn");
-    
-    function openSidebar() {
-        mobileSidebar.classList.remove("hidden");
-        setTimeout(() => {
-            sidebarPanel.classList.remove("translate-x-full");
-        }, 10);
-        document.body.style.overflow = "hidden";
-    }
-    
-    function closeSidebar() {
-        sidebarPanel.classList.add("translate-x-full");
-        setTimeout(() => {
-            mobileSidebar.classList.add("hidden");
-        }, 300);
-        document.body.style.overflow = "";
-    }
-    
-    if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener("click", openSidebar);
-    }
-    
-    if (closeSidebarBtn) {
-        closeSidebarBtn.addEventListener("click", closeSidebar);
-    }
-    
-    if (sidebarBackdrop) {
-        sidebarBackdrop.addEventListener("click", closeSidebar);
-    }
-    
-    // Close sidebar when clicking on navigation links
-    mobileNavLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            closeSidebar();
-        });
-    });
-    
-    // Mobile CTA button
-    if (mobileCtaBtn) {
-        mobileCtaBtn.addEventListener("click", function(e) {
-            e.preventDefault();
-            closeSidebar();
-            scrollToContact();
-        });
-    }
-    
-    // Close sidebar on escape key
-    document.addEventListener("keydown", function(e) {
-        if (e.key === "Escape" && !mobileSidebar.classList.contains("hidden")) {
-            closeSidebar();
-        }
-    });
-});
-</script>
-        <script id="contact-form">
-            document.addEventListener("DOMContentLoaded", function () {
-                const form = document.getElementById("contact-form");
-                const messageInput = document.getElementById("message");
-                const charCount = document.getElementById("char-count");
-                messageInput.addEventListener("input", function () {
-                    const count = this.value.length;
-                    charCount.textContent = count;
-                });
-                form.addEventListener("submit", function (e) {
+    </script>
+    <script id="cta-buttons">
+        document.addEventListener("DOMContentLoaded", function () {
+            function scrollToContact() {
+                const contactSection = document.getElementById("contact");
+                if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+            // Navbar CTA button
+            const navbarCtaBtn = document.getElementById("navbar-cta-btn");
+            if (navbarCtaBtn) {
+                navbarCtaBtn.addEventListener("click", function (e) {
                     e.preventDefault();
-                    const name = document.getElementById("name").value;
-                    const age = document.getElementById("age").value;
-                    const package = document.getElementById("package").value;
-                    const message = document.getElementById("message").value;
-                    let packageName = "";
-                    switch (package) {
-                        case "basic":
-                            packageName = "باقة الأساس";
-                            break;
-                        case "advanced":
-                            packageName = "باقة التميز";
-                            break;
-                            break;
-                    }
-                    const whatsappMessage = `طلب اشتراك جديد:
+                    scrollToContact();
+                });
+            }
+            // Hero CTA button
+            const heroCtaBtn = document.getElementById("hero-cta-btn");
+            if (heroCtaBtn) {
+                heroCtaBtn.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    scrollToContact();
+                });
+            }
+
+            // Mobile sidebar functionality
+            const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+            const mobileSidebar = document.getElementById("mobile-sidebar");
+            const sidebarPanel = document.getElementById("sidebar-panel");
+            const closeSidebarBtn = document.getElementById("close-sidebar-btn");
+            const sidebarBackdrop = document.getElementById("sidebar-backdrop");
+            const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+            const mobileCtaBtn = document.getElementById("mobile-cta-btn");
+
+            function openSidebar() {
+                mobileSidebar.classList.remove("hidden");
+                setTimeout(() => {
+                    sidebarPanel.classList.remove("translate-x-full");
+                }, 10);
+                document.body.style.overflow = "hidden";
+            }
+
+            function closeSidebar() {
+                sidebarPanel.classList.add("translate-x-full");
+                setTimeout(() => {
+                    mobileSidebar.classList.add("hidden");
+                }, 300);
+                document.body.style.overflow = "";
+            }
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener("click", openSidebar);
+            }
+
+            if (closeSidebarBtn) {
+                closeSidebarBtn.addEventListener("click", closeSidebar);
+            }
+
+            if (sidebarBackdrop) {
+                sidebarBackdrop.addEventListener("click", closeSidebar);
+            }
+
+            // Close sidebar when clicking on navigation links
+            mobileNavLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    closeSidebar();
+                });
+            });
+
+            // Mobile CTA button
+            if (mobileCtaBtn) {
+                mobileCtaBtn.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    closeSidebar();
+                    scrollToContact();
+                });
+            }
+
+            // Close sidebar on escape key
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape" && !mobileSidebar.classList.contains("hidden")) {
+                    closeSidebar();
+                }
+            });
+        });
+    </script>
+    <script id="contact-form">
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contact-form");
+            const messageInput = document.getElementById("message");
+            const charCount = document.getElementById("char-count");
+            messageInput.addEventListener("input", function () {
+                const count = this.value.length;
+                charCount.textContent = count;
+            });
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const name = document.getElementById("name").value;
+                const age = document.getElementById("age").value;
+                const package = document.getElementById("package").value;
+                const message = document.getElementById("message").value;
+                let packageName = "";
+                switch (package) {
+                    case "basic":
+                        packageName = "باقة الأساس";
+                        break;
+                    case "advanced":
+                        packageName = "باقة التميز";
+                        break;
+                        break;
+                }
+                const whatsappMessage = `طلب اشتراك جديد:
 الاسم: ${name}
 العمر: ${age}
 الباقة: ${packageName}${message ? "\nرسالة إضافية: " + message : ""}`;
-                    const encodedMessage = encodeURIComponent(whatsappMessage);
-                    window.open(`https://wa.me/201080706069?text=${encodedMessage}`, "_blank");
-                    form.reset();
-                    charCount.textContent = "0";
-                });
+                const encodedMessage = encodeURIComponent(whatsappMessage);
+                window.open(`https://wa.me/201080706069?text=${encodedMessage}`, "_blank");
+                form.reset();
+                charCount.textContent = "0";
             });
-        </script>
+        });
+    </script>
 </body>
 
 </html>
