@@ -227,10 +227,13 @@
                 </ul>
 
                 <div class="mt-8 pt-6 border-t">
-                    <button id="mobile-cta-btn"
-                        class="w-full bg-secondary text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300">
-                        احجز حصتك التجريبية مجاناً
-                    </button>
+                    <a href="#packages">
+                        <button id="mobile-cta-btn"
+                            class="w-full bg-secondary text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300">
+                            احجز حصتك التجريبية مجاناً
+                        </button>
+                    </a>
+                    </a>
                 </div>
             </nav>
         </div>
@@ -1627,16 +1630,7 @@ ${data.notes || 'لا توجد ملاحظات'}
             }
 
             if (mobileMenuBtn) {
-                mobileMenuBtn.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    const packagesSection = document.getElementById('packages');
-                    if (packagesSection) {
-                        packagesSection.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
+                mobileMenuBtn.addEventListener("click", openSidebar);
             }
 
             if (closeSidebarBtn) {
