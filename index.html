@@ -93,6 +93,39 @@
             opacity: 1;
             transform: translateX(-50%) scale(1);
         }
+
+        /* Mobile popup optimizations */
+        @media (max-width: 640px) {
+            #subscription-popup {
+                padding: 0.5rem;
+            }
+
+            #subscription-popup .bg-white {
+                max-height: calc(100vh - 1rem);
+                margin: 0.5rem;
+            }
+
+            /* Prevent body scroll when popup is open */
+            body.popup-open {
+                overflow: hidden;
+                position: fixed;
+                width: 100%;
+            }
+        }
+
+        /* Touch-friendly checkbox styling */
+        @media (max-width: 640px) {
+            input[type="checkbox"] {
+                min-width: 20px;
+                min-height: 20px;
+            }
+
+            label[for*="checkbox"] {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 
@@ -840,46 +873,46 @@
             function showSubscriptionPopup(packageInfo, packageName) {
                 // Create popup HTML
                 const popupHTML = `
-                    <div id="subscription-popup" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
-                        <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300">
+                    <div id="subscription-popup" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-2 sm:p-4 opacity-0 transition-opacity duration-300">
+                        <div class="bg-white rounded-xl sm:rounded-2xl shadow-2xl w-full max-w-sm sm:max-w-2xl max-h-[95vh] sm:max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300 mx-2">
                             <!-- Header -->
-                            <div class="bg-gradient-to-r from-primary to-secondary text-white p-6 rounded-t-2xl">
+                            <div class="bg-gradient-to-r from-primary to-secondary text-white p-4 sm:p-6 rounded-t-xl sm:rounded-t-2xl">
                                 <div class="flex justify-between items-center">
-                                    <h2 class="text-2xl font-cairo font-bold">تسجيل جديد</h2>
-                                    <button id="close-popup" class="text-white hover:text-gray-200 transition-colors">
-                                        <i class="ri-close-line text-2xl"></i>
+                                    <h2 class="text-lg sm:text-2xl font-cairo font-bold">تسجيل جديد</h2>
+                                    <button id="close-popup" class="text-white hover:text-gray-200 transition-colors p-1">
+                                        <i class="ri-close-line text-xl sm:text-2xl"></i>
                                     </button>
                                 </div>
-                                <div class="mt-4 p-4 bg-white/20 rounded-lg">
-                                    <p class="text-sm opacity-90">الباقة المختارة:</p>
-                                    <p class="font-semibold text-lg">${packageInfo}</p>
+                                <div class="mt-3 sm:mt-4 p-3 sm:p-4 bg-white/20 rounded-lg">
+                                    <p class="text-xs sm:text-sm opacity-90">الباقة المختارة:</p>
+                                    <p class="font-semibold text-sm sm:text-lg">${packageInfo}</p>
                                 </div>
                             </div>
                             
                             <!-- Form -->
-                            <form id="subscription-form" class="p-8 space-y-8">
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <form id="subscription-form" class="p-4 sm:p-6 lg:p-8 space-y-6 sm:space-y-8">
+                                <div class="grid grid-cols-1 gap-4 sm:gap-6">
                                     <!-- اسم الطالب -->
                                     <div>
-                                        <label class="block text-right text-gray-700 mb-2 font-semibold">اسم الطالب *</label>
+                                        <label class="block text-right text-gray-700 mb-2 font-semibold text-sm sm:text-base">اسم الطالب *</label>
                                         <input type="text" name="studentName" required
-                                            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right"
+                                            class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right text-sm sm:text-base"
                                             placeholder="أدخل اسم الطالب">
                                     </div>
                                     
                                     <!-- العمر -->
                                     <div>
-                                        <label class="block text-right text-gray-700 mb-2 font-semibold">العمر *</label>
+                                        <label class="block text-right text-gray-700 mb-2 font-semibold text-sm sm:text-base">العمر *</label>
                                         <input type="number" name="age" required min="3" max="99"
-                                            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right"
+                                            class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right text-sm sm:text-base"
                                             placeholder="أدخل العمر">
                                     </div>
                                     
                                     <!-- المرحلة الدراسية -->
                                     <div>
-                                        <label class="block text-right text-gray-700 mb-2 font-semibold">المرحلة الدراسية</label>
+                                        <label class="block text-right text-gray-700 mb-2 font-semibold text-sm sm:text-base">المرحلة الدراسية</label>
                                         <select name="educationLevel"
-                                            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right">
+                                            class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right text-sm sm:text-base">
                                             <option value="">اختر المرحلة الدراسية</option>
                                             <option value="ما قبل المدرسة (3-5 سنوات)">ما قبل المدرسة (3-5 سنوات)</option>
                                             <option value="الابتدائي (6-12 سنة)">الابتدائي (6-12 سنة)</option>
@@ -893,17 +926,17 @@
                                     
                                     <!-- رقم هاتف ولي الأمر -->
                                     <div>
-                                        <label class="block text-right text-gray-700 mb-2 font-semibold">رقم هاتف ولي الأمر *</label>
+                                        <label class="block text-right text-gray-700 mb-2 font-semibold text-sm sm:text-base">رقم هاتف ولي الأمر *</label>
                                         <input type="tel" name="parentPhone" required
-                                            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right"
+                                            class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right text-sm sm:text-base"
                                             placeholder="أدخل رقم الهاتف">
                                     </div>
                                     
                                     <!-- المستوى الحالي في القرآن الكريم -->
                                     <div>
-                                        <label class="block text-right text-gray-700 mb-2 font-semibold">المستوى الحالي في القرآن الكريم *</label>
+                                        <label class="block text-right text-gray-700 mb-2 font-semibold text-sm sm:text-base">المستوى الحالي في القرآن الكريم *</label>
                                         <select name="quranLevel" required
-                                            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right">
+                                            class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right text-sm sm:text-base">
                                             <option value="">اختر المستوى</option>
                                             <option value="مبتدئ - لا يقرأ العربية">مبتدئ - لا يقرأ العربية</option>
                                             <option value="مبتدئ - يقرأ العربية ببطء">مبتدئ - يقرأ العربية ببطء</option>
@@ -917,9 +950,9 @@
                                     
                                     <!-- نوع البرنامج المطلوب -->
                                     <div>
-                                        <label class="block text-right text-gray-700 mb-2 font-semibold">نوع البرنامج المطلوب *</label>
+                                        <label class="block text-right text-gray-700 mb-2 font-semibold text-sm sm:text-base">نوع البرنامج المطلوب *</label>
                                         <select name="programType" required
-                                            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right">
+                                            class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right text-sm sm:text-base">
                                             <option value="">اختر نوع البرنامج</option>
                                             <option value="حفظ جديد">حفظ جديد</option>
                                             <option value="مراجعة المحفوظ">مراجعة المحفوظ</option>
@@ -933,81 +966,81 @@
                                 
                                 <!-- الأيام المفضلة -->
                                 <div>
-                                    <label class="block text-right text-gray-700 mb-3 font-semibold">الأيام المفضلة *</label>
-                                    <div class="grid grid-cols-7 gap-2">
-                                        <label class="flex flex-col items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                    <label class="block text-right text-gray-700 mb-3 font-semibold text-sm sm:text-base">الأيام المفضلة *</label>
+                                    <div class="grid grid-cols-4 sm:grid-cols-7 gap-1.5 sm:gap-2">
+                                        <label class="flex flex-col items-center p-2 sm:p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
                                             <input type="checkbox" name="preferredDays" value="الأحد" class="sr-only">
-                                            <span class="text-sm font-semibold text-gray-700">الأحد</span>
+                                            <span class="text-xs sm:text-sm font-semibold text-gray-700">الأحد</span>
                                         </label>
-                                        <label class="flex flex-col items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                        <label class="flex flex-col items-center p-2 sm:p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
                                             <input type="checkbox" name="preferredDays" value="الاثنين" class="sr-only">
-                                            <span class="text-sm font-semibold text-gray-700">الاثنين</span>
+                                            <span class="text-xs sm:text-sm font-semibold text-gray-700">الاثنين</span>
                                         </label>
-                                        <label class="flex flex-col items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                        <label class="flex flex-col items-center p-2 sm:p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
                                             <input type="checkbox" name="preferredDays" value="الثلاثاء" class="sr-only">
-                                            <span class="text-sm font-semibold text-gray-700">الثلاثاء</span>
+                                            <span class="text-xs sm:text-sm font-semibold text-gray-700">الثلاثاء</span>
                                         </label>
-                                        <label class="flex flex-col items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                        <label class="flex flex-col items-center p-2 sm:p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
                                             <input type="checkbox" name="preferredDays" value="الأربعاء" class="sr-only">
-                                            <span class="text-sm font-semibold text-gray-700">الأربعاء</span>
+                                            <span class="text-xs sm:text-sm font-semibold text-gray-700">الأربعاء</span>
                                         </label>
-                                        <label class="flex flex-col items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                        <label class="flex flex-col items-center p-2 sm:p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
                                             <input type="checkbox" name="preferredDays" value="الخميس" class="sr-only">
-                                            <span class="text-sm font-semibold text-gray-700">الخميس</span>
+                                            <span class="text-xs sm:text-sm font-semibold text-gray-700">الخميس</span>
                                         </label>
-                                        <label class="flex flex-col items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                        <label class="flex flex-col items-center p-2 sm:p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
                                             <input type="checkbox" name="preferredDays" value="الجمعة" class="sr-only">
-                                            <span class="text-sm font-semibold text-gray-700">الجمعة</span>
+                                            <span class="text-xs sm:text-sm font-semibold text-gray-700">الجمعة</span>
                                         </label>
-                                        <label class="flex flex-col items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                        <label class="flex flex-col items-center p-2 sm:p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
                                             <input type="checkbox" name="preferredDays" value="السبت" class="sr-only">
-                                            <span class="text-sm font-semibold text-gray-700">السبت</span>
+                                            <span class="text-xs sm:text-sm font-semibold text-gray-700">السبت</span>
                                         </label>
                                     </div>
                                 </div>
                                 
                                 <!-- الأوقات المفضلة -->
                                 <div>
-                                    <label class="block text-right text-gray-700 mb-3 font-semibold">الأوقات المفضلة *</label>
-                                    <div class="grid grid-cols-3 gap-3">
-                                        <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
-                                            <input type="checkbox" name="preferredTimes" value="الفجر (5:00 - 7:00)" class="w-4 h-4 rounded-full border-2 border-gray-300 text-[#119f94] focus:ring-[#119f94] focus:ring-2 focus:ring-offset-0">
-                                            <span class="text-sm font-semibold text-gray-700 mr-3">الفجر (5:00 - 7:00)</span>
+                                    <label class="block text-right text-gray-700 mb-3 font-semibold text-sm sm:text-base">الأوقات المفضلة *</label>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3">
+                                        <label class="flex items-center p-2.5 sm:p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredTimes" value="الفجر (5:00 - 7:00)" class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border-2 border-gray-300 text-[#119f94] focus:ring-[#119f94] focus:ring-2 focus:ring-offset-0">
+                                            <span class="text-xs sm:text-sm font-semibold text-gray-700 mr-2 sm:mr-3">الفجر (5:00 - 7:00)</span>
                                         </label>
-                                        <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
-                                            <input type="checkbox" name="preferredTimes" value="الصباح (8:00 - 12:00)" class="w-4 h-4 rounded-full border-2 border-gray-300 text-[#119f94] focus:ring-[#119f94] focus:ring-2 focus:ring-offset-0">
-                                            <span class="text-sm font-semibold text-gray-700 mr-3">الصباح (8:00 - 12:00)</span>
+                                        <label class="flex items-center p-2.5 sm:p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredTimes" value="الصباح (8:00 - 12:00)" class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border-2 border-gray-300 text-[#119f94] focus:ring-[#119f94] focus:ring-2 focus:ring-offset-0">
+                                            <span class="text-xs sm:text-sm font-semibold text-gray-700 mr-2 sm:mr-3">الصباح (8:00 - 12:00)</span>
                                         </label>
-                                        <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
-                                            <input type="checkbox" name="preferredTimes" value="الظهر (12:00 - 3:00)" class="w-4 h-4 rounded-full border-2 border-gray-300 text-[#119f94] focus:ring-[#119f94] focus:ring-2 focus:ring-offset-0">
-                                            <span class="text-sm font-semibold text-gray-700 mr-3">الظهر (12:00 - 3:00)</span>
+                                        <label class="flex items-center p-2.5 sm:p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredTimes" value="الظهر (12:00 - 3:00)" class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border-2 border-gray-300 text-[#119f94] focus:ring-[#119f94] focus:ring-2 focus:ring-offset-0">
+                                            <span class="text-xs sm:text-sm font-semibold text-gray-700 mr-2 sm:mr-3">الظهر (12:00 - 3:00)</span>
                                         </label>
-                                        <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
-                                            <input type="checkbox" name="preferredTimes" value="العصر (3:00 - 6:00)" class="w-4 h-4 rounded-full border-2 border-gray-300 text-[#119f94] focus:ring-[#119f94] focus:ring-2 focus:ring-offset-0">
-                                            <span class="text-sm font-semibold text-gray-700 mr-3">العصر (3:00 - 6:00)</span>
+                                        <label class="flex items-center p-2.5 sm:p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredTimes" value="العصر (3:00 - 6:00)" class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border-2 border-gray-300 text-[#119f94] focus:ring-[#119f94] focus:ring-2 focus:ring-offset-0">
+                                            <span class="text-xs sm:text-sm font-semibold text-gray-700 mr-2 sm:mr-3">العصر (3:00 - 6:00)</span>
                                         </label>
-                                        <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
-                                            <input type="checkbox" name="preferredTimes" value="المغرب (6:00 - 8:00)" class="w-4 h-4 rounded-full border-2 border-gray-300 text-[#119f94] focus:ring-[#119f94] focus:ring-2 focus:ring-offset-0">
-                                            <span class="text-sm font-semibold text-gray-700 mr-3">المغرب (6:00 - 8:00)</span>
+                                        <label class="flex items-center p-2.5 sm:p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredTimes" value="المغرب (6:00 - 8:00)" class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border-2 border-gray-300 text-[#119f94] focus:ring-[#119f94] focus:ring-2 focus:ring-offset-0">
+                                            <span class="text-xs sm:text-sm font-semibold text-gray-700 mr-2 sm:mr-3">المغرب (6:00 - 8:00)</span>
                                         </label>
-                                        <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
-                                            <input type="checkbox" name="preferredTimes" value="العشاء (8:00 - 11:00)" class="w-4 h-4 rounded-full border-2 border-gray-300 text-[#119f94] focus:ring-[#119f94] focus:ring-2 focus:ring-offset-0">
-                                            <span class="text-sm font-semibold text-gray-700 mr-3">العشاء (8:00 - 11:00)</span>
+                                        <label class="flex items-center p-2.5 sm:p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#119f94] focus-within:border-[#119f94] transition-colors">
+                                            <input type="checkbox" name="preferredTimes" value="العشاء (8:00 - 11:00)" class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border-2 border-gray-300 text-[#119f94] focus:ring-[#119f94] focus:ring-2 focus:ring-offset-0">
+                                            <span class="text-xs sm:text-sm font-semibold text-gray-700 mr-2 sm:mr-3">العشاء (8:00 - 11:00)</span>
                                         </label>
                                     </div>
                                 </div>
                                 
                                 <!-- ملاحظات إضافية -->
                                 <div>
-                                    <label class="block text-right text-gray-700 mb-2 font-semibold">ملاحظات إضافية</label>
-                                    <textarea name="notes" rows="4"
-                                        class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right resize-none"
+                                    <label class="block text-right text-gray-700 mb-2 font-semibold text-sm sm:text-base">ملاحظات إضافية</label>
+                                    <textarea name="notes" rows="3" sm:rows="4"
+                                        class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right resize-none text-sm sm:text-base"
                                         placeholder="أضف أي ملاحظات إضافية هنا..."></textarea>
                                 </div>
                                 
                                 <!-- Submit Button -->
                                 <button type="submit"
-                                    class="w-full bg-secondary text-white py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all transform hover:scale-105 relative overflow-hidden">
+                                    class="w-full bg-secondary text-white py-3 sm:py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all transform hover:scale-105 relative overflow-hidden text-sm sm:text-base">
                                     <span class="relative z-10">إرسال الطلب</span>
                                     <div class="absolute inset-0 bg-white opacity-20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                                 </button>
@@ -1029,6 +1062,8 @@
                     popup.classList.remove('opacity-0');
                     popup.querySelector('.bg-white').classList.remove('scale-95');
                     popup.querySelector('.bg-white').classList.add('scale-100');
+                    // Prevent body scroll on mobile
+                    document.body.classList.add('popup-open');
                 }, 10);
 
                 // Close popup
@@ -1036,6 +1071,8 @@
                     popup.classList.add('opacity-0');
                     popup.querySelector('.bg-white').classList.remove('scale-100');
                     popup.querySelector('.bg-white').classList.add('scale-95');
+                    // Restore body scroll
+                    document.body.classList.remove('popup-open');
                     setTimeout(() => {
                         popup.remove();
                     }, 300);
@@ -1044,6 +1081,13 @@
                 // Close on backdrop click
                 popup.addEventListener('click', (e) => {
                     if (e.target === popup) {
+                        closeBtn.click();
+                    }
+                });
+
+                // Close on escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && popup) {
                         closeBtn.click();
                     }
                 });
@@ -1076,6 +1120,8 @@
 
                     // Close popup
                     closeBtn.click();
+                    // Restore body scroll
+                    document.body.classList.remove('popup-open');
                 });
 
                 // Handle checkbox styling
