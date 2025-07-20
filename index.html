@@ -1236,7 +1236,8 @@ ${data.notes || 'لا توجد ملاحظات'}
                     carousel.style.transform = `translateX(${translateX}%)`;
 
                     // Update dots - show active dot based on current position
-                    dots.forEach((dot, index) => {
+                    const currentDots = document.querySelectorAll(".carousel-dot");
+                    currentDots.forEach((dot, index) => {
                         if (index === currentIndex) {
                             dot.classList.add("bg-primary");
                             dot.classList.remove("bg-primary/20");
@@ -1267,8 +1268,8 @@ ${data.notes || 'لا توجد ملاحظات'}
                 }
 
                 // Add event listeners for navigation buttons (reversed for RTL)
-                nextBtn.addEventListener("click", handlePrev); // Left arrow goes to previous in RTL
-                prevBtn.addEventListener("click", handleNext); // Right arrow goes to next in RTL
+                nextBtn.addEventListener("click", handleNext); // Left arrow goes to previous in RTL
+                prevBtn.addEventListener("click", handlePrev); // Right arrow goes to next in RTL
 
                 // Dot navigation - update after dots are recreated
                 function updateDotListeners() {
@@ -1318,6 +1319,20 @@ ${data.notes || 'لا توجد ملاحظات'}
 
                     // Update dot listeners after recreating dots
                     updateDotListeners();
+
+                    // Apply active state to current dot after recreation
+                    setTimeout(() => {
+                        const newDots = document.querySelectorAll(".carousel-dot");
+                        newDots.forEach((dot, index) => {
+                            if (index === currentIndex) {
+                                dot.classList.add("bg-primary");
+                                dot.classList.remove("bg-primary/20");
+                            } else {
+                                dot.classList.remove("bg-primary");
+                                dot.classList.add("bg-primary/20");
+                            }
+                        });
+                    }, 10);
                 }
 
                 // Initial dot count setup
