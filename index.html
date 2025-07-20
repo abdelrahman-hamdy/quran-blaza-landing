@@ -364,10 +364,10 @@
             </div>
         </div>
     </section>
-    <section id="testimonials" class="py-28 relative overflow-hidden bg-gradient-to-br to-[#119f94]/10 via-white from-amber-50/80">
+    <section id="testimonials" class="py-16 sm:py-28 relative overflow-hidden bg-gradient-to-br to-[#119f94]/10 via-white from-amber-50/80">
         </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pb-12">
-            <div class="text-center mb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pb-8 sm:pb-12">
+            <div class="text-center mb-8 sm:mb-16">
                 <h2 class="text-4xl font-cairo font-bold text-primary mb-4">ماذا يقول طلابنا؟</h2>
                 <p class="text-xl text-gray-600">شهادات حقيقية من طلاب وأولياء أمور</p>
             </div>
@@ -1627,7 +1627,16 @@ ${data.notes || 'لا توجد ملاحظات'}
             }
 
             if (mobileMenuBtn) {
-                mobileMenuBtn.addEventListener("click", openSidebar);
+                mobileMenuBtn.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const packagesSection = document.getElementById('packages');
+                    if (packagesSection) {
+                        packagesSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
             }
 
             if (closeSidebarBtn) {
