@@ -1230,7 +1230,7 @@ ${data.notes || 'لا توجد ملاحظات'}
                     // Calculate item width based on responsive classes
                     const itemsPerView = getItemsPerView();
                     const itemWidth = 100 / itemsPerView; // Percentage width per item
-                    const translateX = currentIndex * itemWidth * 3; // Scroll 3 items at a time
+                    const translateX = currentIndex * itemWidth; // Scroll 1 item at a time
 
                     carousel.style.transition = "transform 0.3s ease-in-out";
                     carousel.style.transform = `translateX(${translateX}%)`;
@@ -1254,13 +1254,13 @@ ${data.notes || 'لا توجد ملاحظات'}
                 // Handle next button - infinite scroll
                 function handleNext() {
                     if (isAnimating) return;
-                    currentIndex = (currentIndex + 1) % Math.ceil(totalItems / 3);
+                    currentIndex = (currentIndex + 1) % totalItems;
                     updateCarousel();
                 }
 
                 function handlePrev() {
                     if (isAnimating) return;
-                    currentIndex = (currentIndex - 1 + Math.ceil(totalItems / 3)) % Math.ceil(totalItems / 3);
+                    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
                     updateCarousel();
                 }
 
@@ -1268,32 +1268,37 @@ ${data.notes || 'لا توجد ملاحظات'}
                 nextBtn.addEventListener("click", handlePrev); // Left arrow goes to previous in RTL
                 prevBtn.addEventListener("click", handleNext); // Right arrow goes to next in RTL
 
-                // Dot navigation
-                dots.forEach((dot, index) => {
-                    dot.addEventListener("click", () => {
-                        if (isAnimating) return;
-                        currentIndex = index;
-                        updateCarousel();
+                // Dot navigation - update after dots are recreated
+                function updateDotListeners() {
+                    const updatedDots = document.querySelectorAll(".carousel-dot");
+                    updatedDots.forEach((dot, index) => {
+                        dot.addEventListener("click", () => {
+                            if (isAnimating) return;
+                            currentIndex = index;
+                            updateCarousel();
+                        });
                     });
-                });
+                }
 
-                // Update dot count based on three-item groups
+                // Update dot count based on total items (one dot per item)
                 const dotContainer = document.getElementById('carousel-dots');
-                const groupCount = Math.ceil(totalItems / 3);
                 const currentDots = dotContainer.querySelectorAll('.carousel-dot');
 
                 // Remove extra dots
-                for (let i = currentDots.length - 1; i >= groupCount; i--) {
+                for (let i = currentDots.length - 1; i >= totalItems; i--) {
                     currentDots[i].remove();
                 }
 
                 // Add missing dots
-                for (let i = currentDots.length; i < groupCount; i++) {
+                for (let i = currentDots.length; i < totalItems; i++) {
                     const dot = document.createElement('button');
                     dot.className = 'carousel-dot w-3 h-3 rounded-full bg-primary/20 transition-all duration-300';
                     dot.setAttribute('data-index', i);
                     dotContainer.appendChild(dot);
                 }
+
+                // Update dot listeners after recreating dots
+                updateDotListeners();
 
                 // Autoplay functionality
                 let autoplayInterval = null;
