@@ -243,7 +243,7 @@
             </nav>
         </div>
     </div>
-    <section class="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#119f94]/10 via-white to-amber-50/80">
+    <section class="relative  flex items-center overflow-hidden bg-gradient-to-br from-[#119f94]/10 via-white to-amber-50/80">
 
         <div class="relative z-10 w-full py-10 sm:py-16 md:py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -275,42 +275,17 @@
                             </div>
                         </button>
 
-                        <!-- Stats section - responsive -->
-                        <div
-                            class="mt-8 sm:mt-12 md:mt-16 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 sm:gap-8 md:gap-12">
-                            <div class="flex flex-col items-center">
-                                <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mb-2 sm:mb-3">
-                                    <i class="ri-user-3-line text-xl sm:text-2xl text-primary"></i>
+                        <!-- Secondary CTA button with animated arrow -->
+                        <div class="flex justify-center mt-6 sm:mt-8 lg:w-[330px]">
+                            <button id="hero-secondary-btn" type="button"
+                                class="group flex items-center justify-center gap-2 text-primary hover:text-primary/80 transition-all duration-300">
+                                <span class="text-base sm:text-lg font-medium">تعرف على مميزاتنا</span>
+                                <div class="animate-bounce">
+                                    <i class="ri-arrow-down-line text-lg sm:text-xl"></i>
                                 </div>
-                                <div class="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 counter bg-gradient-to-r from-[#a58400] to-[#dbb000] bg-clip-text text-transparent"
-                                    data-target="1000">0</div>
-                                <div class="text-sm sm:text-base text-gray-600">طالب وطالبة</div>
-                            </div>
-                            <div class="hidden sm:block w-px h-12 md:h-16 bg-gray-200"></div>
-                            <div class="flex flex-col items-center">
-                                <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mb-2 sm:mb-3">
-                                    <i class="ri-team-line text-xl sm:text-2xl text-primary"></i>
-                                </div>
-                                <div class="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 counter bg-gradient-to-r from-[#a58400] to-[#dbb000] bg-clip-text text-transparent"
-                                    data-target="50">0</div>
-                                <div class="text-sm sm:text-base text-gray-600">معلم ومعلمة</div>
-                            </div>
-                            <div class="hidden sm:block w-px h-12 md:h-16 bg-gray-200"></div>
-                            <div class="flex flex-col items-center">
-                                <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mb-2 sm:mb-3">
-                                    <div class="flex gap-1">
-                                        <i class="ri-star-fill text-yellow-400 text-sm sm:text-base"></i>
-                                        <i class="ri-star-fill text-yellow-400 text-sm sm:text-base"></i>
-                                        <i class="ri-star-fill text-yellow-400 text-sm sm:text-base"></i>
-                                        <i class="ri-star-fill text-yellow-400 text-sm sm:text-base"></i>
-                                        <i class="ri-star-fill text-yellow-400 text-sm sm:text-base"></i>
-                                    </div>
-                                </div>
-                                <div class="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 counter bg-gradient-to-r from-[#a58400] to-[#dbb000] bg-clip-text text-transparent"
-                                    data-target="95">0</div>
-                                <div class="text-sm sm:text-base text-gray-600">نسبة الرضا</div>
-                            </div>
+                            </button>
                         </div>
+
                     </div>
                 </div>
     </section>
@@ -368,6 +343,42 @@
                     <h3 class="text-xl font-cairo font-semibold text-primary mb-3 group-hover:text-secondary transition-colors duration-300">
                         قصص قرآن بأسلوب تفاعلي</h3>
                     <p class="text-gray-600">قصص قرآنية ممتعة ومفيدة تشرح الآيات بأسلوب مبسط للأطفال</p>
+                </div>
+            </div>
+
+            <!-- Stats section - responsive -->
+            <div class="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-12">
+                <div class="flex flex-col items-center">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mb-2 sm:mb-3">
+                        <i class="ri-user-3-line text-xl sm:text-2xl text-primary"></i>
+                    </div>
+                    <div class="text-4xl sm:text-5xl md:text-6xl font-bold mb-1 sm:mb-2 counter bg-gradient-to-r from-[#a58400] to-[#dbb000] bg-clip-text text-transparent"
+                        data-target="1000">0</div>
+                    <div class="text-sm sm:text-base text-gray-600">طالب وطالبة</div>
+                </div>
+                <div class="hidden sm:block w-px h-12 md:h-16 bg-gray-200"></div>
+                <div class="flex flex-col items-center">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mb-2 sm:mb-3">
+                        <i class="ri-team-line text-xl sm:text-2xl text-primary"></i>
+                    </div>
+                    <div class="text-4xl sm:text-5xl md:text-6xl font-bold mb-1 sm:mb-2 counter bg-gradient-to-r from-[#a58400] to-[#dbb000] bg-clip-text text-transparent"
+                        data-target="50">0</div>
+                    <div class="text-sm sm:text-base text-gray-600">معلم ومعلمة</div>
+                </div>
+                <div class="hidden sm:block w-px h-12 md:h-16 bg-gray-200"></div>
+                <div class="flex flex-col items-center">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mb-2 sm:mb-3">
+                        <div class="flex gap-1">
+                            <i class="ri-star-fill text-yellow-400 text-sm sm:text-base"></i>
+                            <i class="ri-star-fill text-yellow-400 text-sm sm:text-base"></i>
+                            <i class="ri-star-fill text-yellow-400 text-sm sm:text-base"></i>
+                            <i class="ri-star-fill text-yellow-400 text-sm sm:text-base"></i>
+                            <i class="ri-star-fill text-yellow-400 text-sm sm:text-base"></i>
+                        </div>
+                    </div>
+                    <div class="text-4xl sm:text-5xl md:text-6xl font-bold mb-1 sm:mb-2 counter bg-gradient-to-r from-[#a58400] to-[#dbb000] bg-clip-text text-transparent"
+                        data-target="95">0</div>
+                    <div class="text-sm sm:text-base text-gray-600">نسبة الرضا</div>
                 </div>
             </div>
         </div>
@@ -826,7 +837,7 @@
     </section>
 
     <!-- Package Customization Section -->
-    <section id="customize-package" class="py-28 bg-gradient-to-br to-[#119f94]/20 via-white from-indigo-200/80 relative overflow-hidden">
+    <section id="customize-package" class="py-28 bg-gradient-to-br to-[#119f94]/20 via-white from-amber-50/80 relative overflow-hidden">
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
@@ -847,14 +858,14 @@
                             <div>
                                 <label class="block text-right text-gray-700 mb-2 font-semibold">الاسم الكامل</label>
                                 <input type="text" name="name" placeholder="أدخل اسمك الكامل"
-                                    class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-right">
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-right">
                             </div>
 
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-right text-gray-700 mb-2 font-semibold">النوع</label>
                                     <select name="gender"
-                                        class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-right">
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-right">
                                         <option value="">-- اختر النوع --</option>
                                         <option value="رجالي">رجالي</option>
                                         <option value="نسائي">نسائي</option>
@@ -863,21 +874,21 @@
                                 <div>
                                     <label class="block text-right text-gray-700 mb-2 font-semibold">عمر الطالب</label>
                                     <input type="number" name="age" placeholder="العمر" min="5" max="80"
-                                        class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-right">
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-right">
                                 </div>
                             </div>
 
                             <div>
                                 <label class="block text-right text-gray-700 mb-2 font-semibold">رقم التواصل</label>
                                 <input type="tel" name="contact" placeholder="05xxxxxxxx"
-                                    class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-right">
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-right">
                             </div>
 
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-right text-gray-700 mb-2 font-semibold">نوع الباقة</label>
                                     <select name="package-type"
-                                        class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-right">
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-right">
                                         <option value="">-- اختر نوع الباقة --</option>
                                         <option value="normal">عادية - 30 دقيقة فعلية</option>
                                         <option value="intensive">مكثفة - 60 دقيقة فعلية</option>
@@ -886,7 +897,7 @@
                                 <div>
                                     <label class="block text-right text-gray-700 mb-2 font-semibold">عدد الحصص الأسبوعية</label>
                                     <select name="sessions"
-                                        class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-right">
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-right">
                                         <option value="">-- اختر عدد الحصص --</option>
                                         <option value="1">1 حصة أسبوعياً (4 شهرياً)</option>
                                         <option value="2">2 حصة أسبوعياً (8 شهرياً)</option>
@@ -1074,6 +1085,20 @@
                 });
             }
 
+            // Secondary hero button scroll to features
+            const heroSecondaryBtn = document.getElementById('hero-secondary-btn');
+            if (heroSecondaryBtn) {
+                heroSecondaryBtn.addEventListener('click', function () {
+                    const featuresSection = document.getElementById('features');
+                    if (featuresSection) {
+                        featuresSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            }
+
             // Package subscription popup functionality
             const subscriptionButtons = document.querySelectorAll('.subscriptionButton');
 
@@ -1130,7 +1155,7 @@
                                     <div>
                                         <label class="block text-right text-gray-700 mb-2 font-semibold text-sm sm:text-base">اسم الطالب *</label>
                                         <input type="text" name="studentName" required
-                                            class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right text-sm sm:text-base"
+                                            class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 bg-gray-50 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right text-sm sm:text-base"
                                             placeholder="أدخل اسم الطالب">
                                     </div>
                                     
@@ -1138,7 +1163,7 @@
                                     <div>
                                         <label class="block text-right text-gray-700 mb-2 font-semibold text-sm sm:text-base">العمر *</label>
                                         <input type="number" name="age" required min="3" max="99"
-                                            class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right text-sm sm:text-base"
+                                            class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 bg-gray-50 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right text-sm sm:text-base"
                                             placeholder="أدخل العمر">
                                     </div>
                                     
@@ -1146,7 +1171,7 @@
                                     <div>
                                         <label class="block text-right text-gray-700 mb-2 font-semibold text-sm sm:text-base">المرحلة الدراسية</label>
                                         <select name="educationLevel"
-                                            class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right text-sm sm:text-base">
+                                            class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 bg-gray-50 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right text-sm sm:text-base">
                                             <option value="">اختر المرحلة الدراسية</option>
                                             <option value="ما قبل المدرسة (3-5 سنوات)">ما قبل المدرسة (3-5 سنوات)</option>
                                             <option value="الابتدائي (6-12 سنة)">الابتدائي (6-12 سنة)</option>
@@ -1162,7 +1187,7 @@
                                     <div>
                                         <label class="block text-right text-gray-700 mb-2 font-semibold text-sm sm:text-base">رقم هاتف ولي الأمر *</label>
                                         <input type="tel" name="parentPhone" required
-                                            class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right text-sm sm:text-base"
+                                            class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 bg-gray-50 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right text-sm sm:text-base"
                                             placeholder="أدخل رقم الهاتف">
                                     </div>
                                     
@@ -1170,7 +1195,7 @@
                                     <div>
                                         <label class="block text-right text-gray-700 mb-2 font-semibold text-sm sm:text-base">المستوى الحالي في القرآن الكريم *</label>
                                         <select name="quranLevel" required
-                                            class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right text-sm sm:text-base">
+                                            class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 bg-gray-50 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right text-sm sm:text-base">
                                             <option value="">اختر المستوى</option>
                                             <option value="مبتدئ - لا يقرأ العربية">مبتدئ - لا يقرأ العربية</option>
                                             <option value="مبتدئ - يقرأ العربية ببطء">مبتدئ - يقرأ العربية ببطء</option>
@@ -1186,7 +1211,7 @@
                                     <div>
                                         <label class="block text-right text-gray-700 mb-2 font-semibold text-sm sm:text-base">نوع البرنامج المطلوب *</label>
                                         <select name="programType" required
-                                            class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right text-sm sm:text-base">
+                                            class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 bg-gray-50 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right text-sm sm:text-base">
                                             <option value="">اختر نوع البرنامج</option>
                                             <option value="حفظ جديد">حفظ جديد</option>
                                             <option value="مراجعة المحفوظ">مراجعة المحفوظ</option>
@@ -1268,7 +1293,7 @@
                                 <div>
                                     <label class="block text-right text-gray-700 mb-2 font-semibold text-sm sm:text-base">ملاحظات إضافية</label>
                                     <textarea name="notes" rows="3" sm:rows="4"
-                                        class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right resize-none text-sm sm:text-base"
+                                        class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-200 bg-gray-50 focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-right resize-none text-sm sm:text-base"
                                         placeholder="أضف أي ملاحظات إضافية هنا..."></textarea>
                                 </div>
                                 
