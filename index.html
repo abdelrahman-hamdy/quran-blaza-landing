@@ -944,11 +944,11 @@
 
                         <div class="flex items-start p-4 bg-blue-50 rounded-lg border border-blue-100">
                             <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center ml-3 mt-1">
-                                <i class="ri-price-tag-3-line text-white text-sm"></i>
+                                <i class="ri-time-line text-white text-sm"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-blue-800 mb-1">سعر عادل</h4>
-                                <p class="text-blue-700 text-sm">احتساب التكلفة بناءً على اختياراتك</p>
+                                <h4 class="font-bold text-blue-800 mb-1">مرونة في التوقيت</h4>
+                                <p class="text-blue-700 text-sm">اختر الأوقات التي تناسب جدولك</p>
                             </div>
                         </div>
 
@@ -1900,32 +1900,10 @@ ${data.notes || 'لا توجد ملاحظات'}
                         return;
                     }
 
-                    // Base prices for different package types
-                    const basePrices = {
-                        'normal': 40,    // 40 ريال للحصة العادية (30 دقيقة)
-                        'intensive': 60  // 60 ريال للحصة المكثفة (60 دقيقة)
-                    };
-
-                    // Sessions per week (1-7)
-                    const sessionMultipliers = {
-                        '1': 4,   // 4 حصص شهرياً
-                        '2': 8,   // 8 حصص شهرياً
-                        '3': 12,  // 12 حصة شهرياً
-                        '4': 16,  // 16 حصة شهرياً
-                        '5': 20,  // 20 حصة شهرياً
-                        '6': 24,  // 24 حصة شهرياً
-                        '7': 28   // 28 حصة شهرياً
-                    };
-
-                    // Calculate price
-                    const pricePerSession = basePrices[packageType] || 40;
-                    const monthlySessions = sessionMultipliers[sessions] || 4;
-                    const totalPrice = pricePerSession * monthlySessions;
-
                     // Get package type name in Arabic
                     const packageTypeName = packageType === 'normal' ? 'عادية - 30 دقيقة فعلية' : 'مكثفة - 60 دقيقة فعلية';
 
-                    // Create WhatsApp message template (similar to regular packages)
+                    // Create WhatsApp message template without price calculation
                     const whatsappMessage = `*طلب باقة مخصصة جديد*
 
 *البيانات الشخصية:*
@@ -1937,10 +1915,6 @@ ${data.notes || 'لا توجد ملاحظات'}
 *تفاصيل الباقة المخصصة:*
 نوع الباقة: ${packageTypeName}
 عدد الحصص أسبوعياً: ${sessions} حصة
-إجمالي الحصص شهرياً: ${monthlySessions} حصة
-
-*السعر الإجمالي:*
-${totalPrice} ريال سعودي شهرياً
 
 ---
 تم إرسال هذا الطلب من موقع قرآن بلازا
